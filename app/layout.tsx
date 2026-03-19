@@ -61,7 +61,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${roboto.variable}`}>
+      <body className={`${inter.variable} ${roboto.variable} pb-16 md:pb-0`}>
         <Nav />
         {children}
         <GoogleAnalytics gaId={siteConfig.analytics.ga4MeasurementId} />

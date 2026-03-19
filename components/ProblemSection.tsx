@@ -45,6 +45,9 @@ export function ProblemSection() {
         </div>
 
         <div className="mt-12 text-center">
+          <h3 className="mb-4 font-heading text-[20px] font-black text-charcoal">
+            {siteConfig.problem.managementHeading}
+          </h3>
           <p className="text-base font-medium text-charcoal">
             {siteConfig.problem.prompt}
           </p>

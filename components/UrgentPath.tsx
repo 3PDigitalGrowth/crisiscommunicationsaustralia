@@ -20,7 +20,10 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="button-base w-full bg-brand-gold text-navy-dark hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
+      className="w-full bg-brand-gold text-navy-dark font-heading font-black
+                 text-xs tracking-widest uppercase py-4 rounded-[4px]
+                 hover:opacity-90 transition-opacity mt-1
+                 disabled:cursor-not-allowed disabled:opacity-70"
     >
       {pending ? "SENDING..." : siteConfig.urgentPath.formFields.submitLabel}
     </button>
@@ -89,6 +92,9 @@ export function UrgentPath() {
         <p className="mt-1 text-sm text-charcoal-mid">
           {siteConfig.phone.availability}
         </p>
+        <p className="mt-0.5 text-[11px] font-medium text-brand-gold">
+          {siteConfig.phone.responseCommitment}
+        </p>
       </div>
 
       <div className="my-8 flex items-center gap-4">
@@ -101,68 +107,90 @@ export function UrgentPath() {
         <h3 className="font-heading text-2xl font-black text-navy-dark">
           {siteConfig.urgentPath.formHeading}
         </h3>
-        <form action={formAction} className="mt-6 space-y-4">
-          <div>
-            <label className="mb-2 block text-sm font-medium text-charcoal" htmlFor="name">
-              {siteConfig.urgentPath.formFields.name}
-            </label>
-            <input
-              id="name"
-              name="name"
-              required
-              className="w-full rounded-sm border border-border bg-white px-4 py-3 text-charcoal"
-            />
-          </div>
-          <div>
-            <label
-              className="mb-2 block text-sm font-medium text-charcoal"
-              htmlFor="organisation"
-            >
-              {siteConfig.urgentPath.formFields.organisation}
-            </label>
-            <input
-              id="organisation"
-              name="organisation"
-              required
-              className="w-full rounded-sm border border-border bg-white px-4 py-3 text-charcoal"
-            />
-          </div>
-          <div>
-            <label className="mb-2 block text-sm font-medium text-charcoal" htmlFor="phone">
-              {siteConfig.urgentPath.formFields.phone}
-            </label>
-            <input
-              id="phone"
-              name="phone"
-              type="tel"
-              required
-              className="w-full rounded-sm border border-border bg-white px-4 py-3 text-charcoal"
-            />
-          </div>
-          <div>
-            <label className="mb-2 block text-sm font-medium text-charcoal" htmlFor="message">
-              {siteConfig.urgentPath.formFields.message}
-            </label>
-            <textarea
-              id="message"
-              name="message"
-              rows={3}
-              required
-              placeholder={siteConfig.urgentPath.formFields.messagePlaceholder}
-              className="w-full rounded-sm border border-border bg-white px-4 py-3 text-charcoal placeholder:text-charcoal-mid/70"
-            />
-          </div>
-          <SubmitButton />
-          {state.message ? (
-            <p
-              className={`text-sm ${state.status === "error" ? "text-red-700" : "text-brand-teal"}`}
-              role={state.status === "error" ? "alert" : "status"}
-            >
-              {state.message}
+
+        {state.status === "success" ? (
+          <div className="mt-6 rounded-[6px] border border-border bg-off-white p-6 text-center">
+            <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-brand-teal/10">
+              <svg
+                width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="#07AFBB" strokeWidth="2.5"
+                strokeLinecap="round" strokeLinejoin="round"
+                aria-hidden="true"
+              >
+                <polyline points="20 6 9 17 4 12" />
+              </svg>
+            </div>
+            <p className="mb-2 font-heading text-[17px] font-black text-navy-dark">
+              {siteConfig.urgentPath.successState.heading}
             </p>
-          ) : null}
-        </form>
+            <p className="mb-4 text-[13px] leading-relaxed text-charcoal">
+              {siteConfig.urgentPath.successState.body}
+            </p>
+            <a
+              href={siteConfig.phone.href}
+              className="inline-flex items-center gap-2 rounded-[4px] bg-brand-gold px-6 py-3 font-heading text-xs font-black uppercase tracking-widest text-navy-dark transition-opacity hover:opacity-90"
+            >
+              <svg
+                width="14" height="14" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" strokeWidth="2.5"
+                aria-hidden="true"
+              >
+                <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 A2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81 a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27 a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+              </svg>
+              {siteConfig.urgentPath.successState.ctaLabel}
+            </a>
+          </div>
+        ) : (
+          <form action={formAction} className="mt-6">
+            <div className="flex flex-col gap-3">
+              <div>
+                <label htmlFor="urgent-name" className="sr-only">Full Name</label>
+                <input
+                  id="urgent-name"
+                  name="name"
+                  type="text"
+                  required
+                  placeholder="Full Name"
+                  className="w-full rounded-sm border border-border bg-off-white px-3 py-2.5 text-sm text-charcoal focus:border-brand-gold focus:outline-none"
+                />
+              </div>
+              <div>
+                <label htmlFor="urgent-phone" className="sr-only">Phone Number</label>
+                <input
+                  id="urgent-phone"
+                  name="phone"
+                  type="tel"
+                  required
+                  placeholder="Phone Number"
+                  className="w-full rounded-sm border border-border bg-off-white px-3 py-2.5 text-sm text-charcoal focus:border-brand-gold focus:outline-none"
+                />
+              </div>
+              <div>
+                <label htmlFor="urgent-message" className="sr-only">
+                  Brief description (optional)
+                </label>
+                <textarea
+                  id="urgent-message"
+                  name="message"
+                  rows={2}
+                  placeholder="Brief description - optional. We will call you to discuss."
+                  className="w-full resize-none rounded-sm border border-border bg-off-white px-3 py-2.5 text-sm text-charcoal focus:border-brand-gold focus:outline-none"
+                />
+              </div>
+              <SubmitButton />
+            </div>
+            {state.status === "error" && state.message ? (
+              <p className="mt-3 text-sm text-red-700" role="alert">
+                {state.message}
+              </p>
+            ) : null}
+          </form>
+        )}
       </div>
+
+      <p className="mt-4 text-[11px] italic leading-relaxed text-charcoal-mid">
+        {siteConfig.urgentPath.confidentialityNote}
+      </p>
 
       <p className="mt-4 text-sm italic text-charcoal-mid">
         {siteConfig.urgentPath.footer}

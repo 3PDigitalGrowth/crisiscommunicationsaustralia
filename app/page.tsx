@@ -1,12 +1,15 @@
 import AnnualSummitBanner from "@/components/AnnualSummitBanner";
 import { AuthorityBar } from "@/components/AuthorityBar";
+import CaseStudies from "@/components/CaseStudies";
 import CrisisPreventionCallout from "@/components/CrisisPreventionCallout";
 import { DifferentiationSection } from "@/components/DifferentiationSection";
+import FAQSection from "@/components/FAQSection";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
 import { Hero } from "@/components/Hero";
 import { LeadMagnetModalProvider } from "@/components/LeadMagnetModalProvider";
 import { LyallMercerSection } from "@/components/LyallMercerSection";
+import MobileCallBar from "@/components/MobileCallBar";
 import { ProblemSection } from "@/components/ProblemSection";
 import { Testimonials } from "@/components/Testimonials";
 import { TwoPathSection } from "@/components/TwoPathSection";
@@ -71,12 +74,29 @@ const jsonLd = {
   },
 };
 
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: siteConfig.faqs.items.map((faq) => ({
+    "@type": "Question",
+    name: faq.question,
+    acceptedAnswer: {
+      "@type": "Answer",
+      text: faq.schemaAnswer,
+    },
+  })),
+};
+
 export default function Home() {
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       <LeadMagnetModalProvider>
         <main>
@@ -86,12 +106,15 @@ export default function Home() {
           <TwoPathSection />
           <CrisisPreventionCallout />
           <LyallMercerSection />
+          <CaseStudies />
           <Testimonials />
           <AnnualSummitBanner />
           <DifferentiationSection />
           <FinalCTA />
+          <FAQSection />
         </main>
         <Footer />
+        <MobileCallBar />
       </LeadMagnetModalProvider>
     </>
   );

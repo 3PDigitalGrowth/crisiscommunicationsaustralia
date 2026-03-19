@@ -12,6 +12,7 @@ export const siteConfig = {
     display: "1300 182 186",
     href: "tel:1300182186",
     availability: "Available 24 hours, 7 days",
+    responseCommitment: "We answer. If unavailable, we call back within the hour.",
     navLabel: "URGENT SUPPORT: 1300 182 186",
   },
   email: {
@@ -81,18 +82,41 @@ export const siteConfig = {
   },
   coFounderName: "Barbara Gorogh",
   mediaOutlets: ["ABC News", "The Australian", "Sky News", "AFR", "ABC Radio"],
+  mediaLinks: [
+    {
+      name: "ABC News",
+      href: "https://lyallmercer.com",
+    },
+    {
+      name: "The Australian",
+      href: "https://lyallmercer.com",
+    },
+    {
+      name: "Sky News",
+      href: "https://lyallmercer.com",
+    },
+    {
+      name: "AFR",
+      href: "https://lyallmercer.com",
+    },
+    {
+      name: "ABC Radio",
+      href: "https://lyallmercer.com",
+    },
+  ],
   scrollTargets: {
     urgent: urgentPathId,
     prepared: preparedPathId,
   },
   seo: {
-    title: "Crisis Communications Australia | Urgent Help & Crisis Training",
+    title: "Crisis Communications Australia | Crisis PR Consultants & Training",
     description:
-      "Australia's most trusted crisis communications advisors. Immediate 24/7 crisis response from CRC PR - call 1300 182 186 - or build your team's skills with the My PR Partner Crisis Masterclass, featuring the exclusive Crisis Ready® course by Melissa Agnes.",
+      "Australia's leading crisis communications and crisis PR consultants. Immediate 24/7 crisis management support from CRC PR - call 1300 182 186 - or build your team's skills with the My PR Partner Crisis Masterclass, featuring the exclusive Crisis Ready® course by Melissa Agnes.",
     keywords:
       "crisis communications australia, crisis PR, crisis management, crisis communications training, crisis consultant australia, crisis public relations",
     ogTitle: "Crisis Communications Australia",
-    ogDescription: "Urgent crisis response. Expert crisis training. One ecosystem.",
+    ogDescription:
+      "Australia's leading crisis communications and crisis PR consultants, with urgent crisis management support and expert training.",
   },
   hero: {
     eyebrow: "A DIVISION OF CRC PR, AUSTRALIA'S LEADING CRISIS & PR ADVISORY FIRM",
@@ -116,6 +140,8 @@ export const siteConfig = {
       "Your reputation, built over years, sometimes decades, can unravel in a single news cycle.",
       "The question is never if a crisis will come. The question is whether you will be ready when it does.",
     ],
+    managementHeading:
+      "Australia's most trusted crisis management and communications team.",
     prompt: "Which situation describes you right now?",
     links: {
       urgent: "I'm in a crisis right now",
@@ -167,13 +193,20 @@ export const siteConfig = {
       organisation: "Organisation",
       phone: "Phone Number",
       message: "Nature of Situation",
-      messagePlaceholder: "Brief description, this is confidential",
+      messagePlaceholder: "Brief description - optional. We will call you to discuss.",
       submitLabel: "GET HELP NOW →",
-      successMessage:
-        "Thank you, your message is confidential. We will be in touch shortly.",
+      successMessage: "Message received.",
       errorMessage:
-        "Please complete every field so we can respond quickly and confidentially.",
+        "Please enter your name and phone number so we can call you quickly and confidentially.",
     },
+    successState: {
+      heading: "Message received.",
+      body:
+        "A CRC PR adviser will call you within the hour. If your situation is immediately urgent, call us directly now.",
+      ctaLabel: "CALL 1300 182 186",
+    },
+    confidentialityNote:
+      "Everything shared with CRC PR is treated with strict confidentiality. We do not reference client engagements without explicit written permission. Our advisers operate with the same professional discretion as legal counsel.",
     footer:
       "A division of CRC PR, trusted crisis advisory across Australia, the Pacific, and internationally for over 25 years.",
   },
@@ -249,6 +282,36 @@ export const siteConfig = {
       { value: "EVERY", label: "CONTINENT WORKED" },
     ],
   },
+  caseStudies: {
+    eyebrow: "Proven outcomes",
+    heading: ["We have been in the room", "when it mattered most."],
+    body: "Client identities are protected. Outcomes are real.",
+    confidentialityNote:
+      "All client details are withheld at client request. CRC PR does not reference engagements without explicit written permission.",
+    cards: [
+      {
+        context: "National Industry Association",
+        challenge: "Regulatory threat",
+        description:
+          "Guided the board through a six-month public advocacy campaign during a period of acute regulatory pressure. Media strategy, stakeholder communications, and government relations coordinated simultaneously.",
+        outcomeBadge: "Legislation Amended",
+      },
+      {
+        context: "Private Education Group",
+        challenge: "Reputation crisis",
+        description:
+          "Managed the complete media response and parent communications strategy during a high-profile reputational incident. Containment achieved within 72 hours. No adverse coverage sustained.",
+        outcomeBadge: "Zero Enrolment Loss",
+      },
+      {
+        context: "Pacific Government",
+        challenge: "International relations",
+        description:
+          "Strategic counsel on stakeholder engagement and cross-cultural communications during a sensitive international negotiation. Communications strategy aligned across multiple government departments.",
+        outcomeBadge: "Funding Secured",
+      },
+    ],
+  },
   testimonials: {
     cards: [
       {
@@ -318,6 +381,61 @@ export const siteConfig = {
     preparedLabel: "I WANT TO GET PREPARED",
     leadPrefix: "Not ready to decide?",
     leadLink: "Start with our free Crisis Readiness Checklist",
+  },
+  faqs: {
+    eyebrow: "Common questions",
+    heading: "Frequently asked questions.",
+    items: [
+      {
+        question: "What is crisis communications?",
+        answer:
+          "Crisis communications is the strategic management of information, messaging, and media relations when an organisation faces a situation that threatens its reputation, operations, or stakeholder relationships. It covers everything from data breaches and product recalls to industrial disputes, legal proceedings, and social media incidents. Effective crisis communications protects reputation, maintains stakeholder trust, and minimises long-term damage to an organisation.",
+        schemaAnswer:
+          "Crisis communications is the strategic management of information, messaging, and media relations when an organisation faces a situation that threatens its reputation, operations, or stakeholder relationships. It covers everything from data breaches and product recalls to industrial disputes, legal proceedings, and social media incidents.",
+      },
+      {
+        question: "What does a crisis communications consultant do?",
+        answer:
+          "A crisis communications consultant advises organisations before, during, and after a crisis. Before a crisis, they assess vulnerabilities, build crisis communications plans, and run training and simulation exercises. During a crisis, they coordinate the media response, manage messaging across all stakeholder groups, advise spokespeople, and guide executive decision-making in real time. After a crisis, they manage reputation recovery and analyse what can be improved for next time.",
+        schemaAnswer:
+          "A crisis communications consultant advises organisations before, during, and after a crisis. Before a crisis, they assess vulnerabilities, build crisis communications plans, and run training and simulation exercises. During a crisis, they coordinate the media response, manage messaging, advise spokespeople, and guide executive decision-making in real time.",
+      },
+      {
+        question: "How quickly should an organisation respond to a crisis?",
+        answer:
+          "The first 15 minutes after a crisis breaks are critical. Organisations that fail to respond within this window begin to lose control of the narrative, often permanently. A prepared organisation with a crisis communications plan and trained spokespeople can respond rapidly, calmly, and effectively. An unprepared organisation typically responds too slowly, says the wrong things, or says nothing at all, each of which makes the situation worse.",
+        schemaAnswer:
+          "The first 15 minutes after a crisis breaks are critical. Organisations that fail to respond within this window begin to lose control of the narrative. A prepared organisation with a crisis communications plan and trained spokespeople can respond rapidly, calmly, and effectively.",
+      },
+      {
+        question: "How much does crisis PR and crisis communications advice cost in Australia?",
+        answer:
+          "The cost of crisis communications support in Australia varies significantly depending on the scale and duration of the situation. Boutique crisis PR firms typically charge between $5,000 and $20,000 per month for ongoing retainer arrangements. For specific crisis incidents, project-based engagements are common. CRC PR provides confidential consultations to discuss the right approach for your situation - contact us directly on 1300 182 186.",
+        schemaAnswer:
+          "Boutique crisis PR firms typically charge between $5,000 and $20,000 per month for ongoing retainer arrangements. CRC PR provides confidential consultations to discuss the right approach for your situation - contact us directly on 1300 182 186.",
+      },
+      {
+        question: "What is the difference between crisis communications and issues management?",
+        answer:
+          "Issues management is proactive - it involves identifying potential problems before they escalate and developing strategies to address them. Crisis communications is reactive - it kicks in when an issue has already broken publicly and requires immediate response. The best outcomes occur when organisations invest in issues management so that crises are either prevented entirely or managed from a position of preparation rather than panic.",
+        schemaAnswer:
+          "Issues management is proactive - it involves identifying potential problems before they escalate. Crisis communications is reactive - it kicks in when an issue has already broken publicly and requires immediate response.",
+      },
+      {
+        question: "What is the My PR Partner Crisis Masterclass?",
+        answer:
+          "The My PR Partner Crisis Masterclass is a 12-month online training program that gives communications professionals, HR managers, school leaders, SME owners, and executive teams the practical skills to prepare for, manage, and recover from any reputational crisis. It features the exclusive Crisis Ready® course presented by Melissa Agnes of the Crisis Ready Institute USA, quarterly live webinars, monthly Q&A sessions, and fortnightly training resources from Lyall Mercer. The program is backed by CRC PR's 25 years of frontline crisis consulting experience and is available exclusively in Australasia through My PR Partner.",
+        schemaAnswer:
+          "The My PR Partner Crisis Masterclass is a 12-month online training program featuring the exclusive Crisis Ready® course by Melissa Agnes of the Crisis Ready Institute USA, backed by CRC PR's 25 years of frontline crisis consulting experience. Available exclusively in Australasia.",
+      },
+      {
+        question: "Does CRC PR work with organisations outside Australia?",
+        answer:
+          "Yes. CRC PR has worked with clients and media on every continent. The firm has particular depth of experience across the Pacific region, having advised governments and organisations across Cook Islands, Fiji, Papua New Guinea, Samoa, Tonga, Vanuatu, and New Zealand. Lyall Mercer and the CRC PR team are available by phone or video link anywhere in the world, anytime.",
+        schemaAnswer:
+          "Yes. CRC PR has worked with clients and media on every continent, with particular experience across the Pacific region including Cook Islands, Fiji, Papua New Guinea, Samoa, Tonga, Vanuatu, and New Zealand.",
+      },
+    ],
   },
   footer: {
     ecosystemLabel: "OUR ECOSYSTEM",
