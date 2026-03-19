@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white font-sans text-charcoal antialiased;
+}
+
+a {
+  @apply transition-all duration-300;
+}
+
+button,
+input,
+textarea,
+select {
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-teal focus-visible:ring-offset-2;
+}
+
+::selection {
+  @apply bg-brand-teal/20 text-charcoal;
+}
+
+@layer components {
+  .section-shell {
+    @apply max-w-7xl mx-auto px-6;
+  }
+
+  .section-eyebrow {
+    @apply font-sans text-[13px] font-medium uppercase tracking-[0.28em];
+  }
+
+  .heading-display {
+    @apply font-heading text-5xl font-black leading-[0.95] md:text-7xl;
+  }
+
+  .heading-section {
+    @apply font-heading text-[2rem] font-black leading-tight md:text-5xl;
+  }
+
+  .heading-card {
+    @apply font-heading text-[1.75rem] font-black leading-tight md:text-[2.25rem];
+  }
+
+  .body-large {
+    @apply text-lg leading-[1.7];
+  }
+
+  .button-base {
+    @apply inline-flex items-center justify-center gap-2 rounded-sm px-8 py-4 text-[15px] font-bold uppercase tracking-[0.08em] transition-all duration-300;
+  }
+}
