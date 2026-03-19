@@ -1,4 +1,6 @@
+import AnnualSummitBanner from "@/components/AnnualSummitBanner";
 import { AuthorityBar } from "@/components/AuthorityBar";
+import CrisisPreventionCallout from "@/components/CrisisPreventionCallout";
 import { DifferentiationSection } from "@/components/DifferentiationSection";
 import { FinalCTA } from "@/components/FinalCTA";
 import { Footer } from "@/components/Footer";
@@ -14,8 +16,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ProfessionalService",
   name: siteConfig.brand.name,
-  description:
-    "Crisis communications advisory and training. Urgent crisis response from CRC PR, and the My PR Partner Crisis Masterclass, backed by 25 years of consulting experience across Australia, the Pacific, and internationally.",
+  description: siteConfig.seo.description,
   url: siteConfig.brand.siteUrl,
   telephone: siteConfig.phone.display,
   areaServed: ["AU", "NZ", "PG", "FJ", "US", "CA"],
@@ -48,7 +49,7 @@ const jsonLd = {
           "@type": "Service",
           name: "Urgent Crisis Communications Consulting",
           description:
-            "24/7 crisis communications advisory from CRC PR. Immediate response for media management, reputation protection, and crisis coordination.",
+            "24/7 crisis communications advisory from CRC PR. Immediate response for media management, reputation protection, issues management, and crisis coordination.",
         },
       },
       {
@@ -83,8 +84,10 @@ export default function Home() {
           <AuthorityBar />
           <ProblemSection />
           <TwoPathSection />
+          <CrisisPreventionCallout />
           <LyallMercerSection />
           <Testimonials />
+          <AnnualSummitBanner />
           <DifferentiationSection />
           <FinalCTA />
         </main>

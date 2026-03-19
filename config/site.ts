@@ -9,19 +9,21 @@ export const siteConfig = {
     siteUrl: "https://crisiscommunications.com.au",
   },
   phone: {
-    display: "1300 XXX XXX", // TODO: CLIENT TO PROVIDE
-    href: "tel:1300XXXXXX", // TODO: CLIENT TO PROVIDE
+    display: "1300 182 186",
+    href: "tel:1300182186",
     availability: "Available 24 hours, 7 days",
-    navLabel: "URGENT SUPPORT: 1300 XXX XXX", // TODO: CLIENT TO PROVIDE
+    navLabel: "URGENT SUPPORT: 1300 182 186",
   },
   email: {
-    general: "info@crcpr.com.au", // TODO: CLIENT TO PROVIDE
-    media: "media@crcpr.com.au", // TODO: CLIENT TO PROVIDE
+    general: "info@crcpr.com.au",
+    media: "media@crcpr.com.au",
   },
   address: {
     company: "CRC PR",
-    city: "TODO: City",
-    state: "TODO: State",
+    street: "320 Adelaide Street",
+    city: "Brisbane",
+    state: "QLD",
+    postcode: "4000",
     country: "Australia",
   },
   analytics: {
@@ -37,19 +39,22 @@ export const siteConfig = {
     lyallMercerUrl: "https://lyallmercer.com",
     lyallLinkedIn: "https://www.linkedin.com/in/lyallmercer/",
     lyallTwitter: "https://twitter.com/Lyall_Mercer",
-    crcPrUrl: "https://crcpr.com.au/",
-    myPrPartnerUrl: "https://myprpartner.com/",
-    masterclassUrl: "https://myprpartner.com/crisis-masterclass", // TODO: CLIENT TO CONFIRM
-    privacyPolicyUrl: "#", // TODO: CLIENT TO PROVIDE
-    termsUrl: "#", // TODO: CLIENT TO PROVIDE
+    crcPrUrl: "https://crcpr.com.au",
+    crcPrServicesUrl: "https://crcpr.com.au/services/",
+    crcPrPacificUrl: "https://crcpr.com.au/pacific/",
+    myPrPartnerUrl: "https://myprpartner.com",
+    masterclassUrl: "https://myprpartner.com/crisis-masterclass/",
+    masterclassEnrolUrl: "https://myprpartner.com/product/crisis-masterclass/",
+    privacyPolicyUrl: "https://myprpartner.com/privacy-policy/",
+    termsUrl: "https://myprpartner.com/terms-and-conditions/",
     disclaimerUrl: "#", // TODO: CLIENT TO PROVIDE
   },
   legal: {
-    abn: "XX XXX XXX XXX", // TODO: CLIENT TO PROVIDE
+    abn: "",
     copyrightYear: "2026",
   },
   assets: {
-    lyallMercerImage: "/images/lyall-mercer.png",
+    lyallMercerImage: "/images/lyall-mercer.jpg",
     ogImage: "/images/og-image.jpg", // TODO: CLIENT TO PROVIDE
   },
   stats: {
@@ -59,6 +64,22 @@ export const siteConfig = {
     clientRetention: "100%",
     continentsWorked: "Every",
   },
+  masterclass: {
+    price: "$340",
+    billing: "per month",
+    commitment: "annual subscription",
+    trialDays: "10",
+    trialCopy: "Full access. No charge for 10 days.",
+  },
+  crisisReadyInstitute: {
+    name: "Crisis Ready Institute USA",
+    instructorName: "Melissa Agnes",
+    instructorTitle: "Founder, Crisis Ready Institute USA",
+    courseName: "Crisis Ready®",
+    credentials:
+      "Author of Crisis Ready: Building an Invincible Brand in an Uncertain World. Trained NATO, the Pentagon, and organisations on every continent. Crisis Ready® Model taught at Harvard University.",
+  },
+  coFounderName: "Barbara Gorogh",
   mediaOutlets: ["ABC News", "The Australian", "Sky News", "AFR", "ABC Radio"],
   scrollTargets: {
     urgent: urgentPathId,
@@ -67,7 +88,7 @@ export const siteConfig = {
   seo: {
     title: "Crisis Communications Australia | Urgent Help & Crisis Training",
     description:
-      "Trusted crisis communications advisers across Australia, the Pacific, and internationally. Immediate consulting from CRC PR, or build your team's capabilities with the My PR Partner Crisis Masterclass, backed by 25 years of experience.",
+      "Australia's most trusted crisis communications advisors. Immediate 24/7 crisis response from CRC PR - call 1300 182 186 - or build your team's skills with the My PR Partner Crisis Masterclass, featuring the exclusive Crisis Ready® course by Melissa Agnes.",
     keywords:
       "crisis communications australia, crisis PR, crisis management, crisis communications training, crisis consultant australia, crisis public relations",
     ogTitle: "Crisis Communications Australia",
@@ -87,8 +108,6 @@ export const siteConfig = {
   },
   authorityBar: {
     label: "LYALL MERCER, AS SEEN IN",
-    proof:
-      "500+ Professionals Trained  ·  15+ Industries Served",
   },
   problem: {
     heading: ["A crisis doesn't wait", "for business hours."],
@@ -138,6 +157,9 @@ export const siteConfig = {
       { icon: "lock", label: "100% Confidential" },
       { icon: "phone", label: "Immediate Response" },
     ],
+    servicesCopy:
+      "CRC PR also provides media strategy, issues management, reputation advisory, corporate communications, digital media, and media training.",
+    servicesLinkLabel: "View full services at crcpr.com.au →",
     phoneLabel: "Call us now:",
     formHeading: "Send a confidential message",
     formFields: {
@@ -161,20 +183,26 @@ export const siteConfig = {
     heading: ["Be Ready Before", "The Crisis Hits."],
     paragraphs: [
       "Most Australian businesses are one incident away from a reputational crisis they are not equipped to handle.",
-      "The My PR Partner Crisis Masterclass gives comms leads, HR managers, SME owners, and executive teams the practical skills to prepare for, manage, and recover from any crisis, taught by the firm that has handled crises across Australia and internationally for over 25 years.",
+      "The My PR Partner Crisis Masterclass gives comms leads, HR managers, school principals, SME owners, executive teams, and industry association staff the practical skills to prepare for, manage, and recover from any crisis, taught by the firm that has handled crises across Australia and internationally for over 25 years.",
       "This is not theory. This is war-room methodology, made accessible.",
     ],
     highlights: [
-      "12-month curriculum built on 25 years of real crisis & PR experience",
-      "Australian context, local law, media landscape, and case studies",
-      "Cancel anytime, from $340/month per person",
+      "Exclusive Crisis Ready® 12-month course - presented by Melissa Agnes, Crisis Ready Institute USA",
+      "Australian context, local law, media landscape, and real case studies",
+      "From $340/month - paid as an annual subscription. Try free for 10 days.",
     ],
+    melissaLabel: "In partnership with",
+    melissaHeading: "Crisis Ready® Institute USA",
+    melissaBody:
+      "The Crisis Ready® 12-month course is presented exclusively for Australasia by Melissa Agnes - global authority on crisis leadership, whose model is taught at Harvard University and has been used to train NATO, the Pentagon, and organisations on every continent.",
     badge: "Powered by CRC PR",
-    primaryCta: "VIEW THE MASTERCLASS →",
+    primaryCta: "START FREE FOR 10 DAYS →",
+    primaryCtaSubtext:
+      "Full access. No charge for 10 days. Annual subscription from $340/month thereafter.",
     secondaryPrefix: "Not ready to commit?",
     secondaryLink: "Download our free Crisis Readiness Checklist →",
     footer:
-      "Backed by 25 years of real crisis advisory work across Australia, the Pacific, and internationally.",
+      "Founded by Lyall Mercer and Barbara Gorogh. Backed by 25 years of real crisis advisory work across Australia, the Pacific, and internationally.",
   },
   leadMagnet: {
     eyebrow: "FREE DOWNLOAD",
@@ -226,23 +254,26 @@ export const siteConfig = {
       {
         accent: "gold",
         quote:
-          "\"When the call came at midnight, CRC PR answered. Lyall and the team were calm, strategic, and completely in control. Their advice was flawless. We came through without a single enrolment loss.\"",
-        name: "[Name withheld at client request]",
-        role: "Head of Operations, Private Education Group",
+          "CRC Public Relations has developed a crisis communications plan for Christian schools and has assisted many of our member schools across Australia to effectively communicate when issues have arisen.",
+        name: "Vanessa Cheng",
+        role: "Executive Officer",
+        company: "Australian Association of Christian Schools",
       },
       {
         accent: "teal",
         quote:
-          "\"The Crisis Masterclass is the most practical professional development our communications team has done. Not theory, real tools, real scenarios, real outcomes. We are a different team because of it.\"",
-        name: "Communications Manager",
-        role: "ASX-Listed Resources Company",
+          "CRC Public Relations has helped us generate major, ongoing, national exposure and ensure that our message is widely heard.",
+        name: "Peter White AM",
+        role: "Managing Director",
+        company: "Finance Brokers Association of Australia",
       },
       {
         accent: "gold",
         quote:
-          "\"We had no crisis plan. No spokesperson training. No idea what to do. The Masterclass changed all of that in 90 days. I recommend it to every comms professional in Australia.\"",
-        name: "HR Director",
-        role: "National Industry Association",
+          "The invaluable customer relations support from CRC Public Relations helps ensure a high level of trust in, and growth for, our chain of more than 50 restaurants.",
+        name: "Hamish Watson",
+        role: "Director",
+        company: "Cafe 63",
       },
     ],
     footer:
@@ -256,7 +287,7 @@ export const siteConfig = {
         icon: "building",
         title: "25 Years of Real Cases",
         body:
-          "Not US content. Not academic theory. Australian crises, international media, real legal and regulatory pressure, taught by the practitioner who was actually there. Lyall began his career as a journalist, which means he understands the media from the inside out.",
+          "Not US content. Not academic theory. Australian crises, international media, real legal and regulatory pressure - taught by the practitioner who was actually there. Lyall began his career as a journalist, giving him an understanding of media that no course can replicate.",
       },
       {
         icon: "users",
@@ -268,13 +299,13 @@ export const siteConfig = {
         icon: "dollar",
         title: "Accessible Without Being Cheap",
         body:
-          "Boutique consultancies charge $5K–$20K/month. Generic courses charge $20. The Crisis Masterclass at $340/month gives you practitioner-grade content without the retainer.",
+          "Boutique consultancies charge $5K-$20K/month. Generic courses charge $20. The Crisis Masterclass at $340/month - annual subscription, free for 10 days - gives you practitioner-grade content and a global curriculum without the retainer.",
       },
       {
         icon: "globe",
         title: "Every Sector. Every Continent.",
         body:
-          "From ASX companies and government departments to schools, faith-based organisations, sporting bodies, and Pacific governments, CRC PR has advised clients across every sector and worked with media on every continent.",
+          "From ASX companies and government departments to schools, faith-based organisations, sporting bodies, and Pacific governments across Cook Islands, Fiji, Papua New Guinea, Samoa, Tonga, Vanuatu, and beyond - CRC PR has advised clients across every sector and worked with media on every continent.",
       },
     ],
   },
@@ -295,11 +326,12 @@ export const siteConfig = {
     ecosystemLinks: [
       {
         label: "CRC PR, Corporate & Crisis Advisory",
-        href: "https://crcpr.com.au/",
+        href: "https://crcpr.com.au",
       },
       {
-        label: "My PR Partner, Crisis Masterclass",
-        href: "https://myprpartner.com/",
+        label: "My PR Partner - Crisis Masterclass",
+        href: "https://myprpartner.com",
+        note: "Founded by Lyall Mercer & Barbara Gorogh",
       },
       {
         label: "Lyall Mercer, Adviser & Commentator",
@@ -312,10 +344,23 @@ export const siteConfig = {
       masterclass: "View the Crisis Masterclass",
     },
     description:
-      "A division of CRC PR, trusted crisis and corporate communications advisory across Australia, the Pacific, and internationally.",
+      "A division of CRC PR - trusted crisis and corporate communications advisory across Australia, the Pacific, and internationally.",
     mediaEnquiriesPrefix: "For media enquiries:",
-    copyright:
-      "© 2026 CRC PR Pty Ltd. All rights reserved. ABN: XX XXX XXX XXX",
+  },
+  crisisPreventionCallout: {
+    eyebrow: "A third option",
+    heading: "Not in crisis. Not sure you're ready.",
+    body:
+      "Most crises are preventable. CRC PR's Crisis Prevention Consultancy and Vulnerability Assessment identifies where your organisation is exposed - before the media call comes. It's a confidential, practical review of your real risk areas, conducted by Australia's most experienced crisis advisors.",
+    cta: "Learn about Crisis Prevention Consultancy at CRC PR →",
+  },
+  annualSummit: {
+    eyebrow: "Annual event",
+    heading: ["Crisis Communications", "Australia Annual Summit"],
+    body:
+      "The premier crisis communications event in the Oceania region. Masterclass members attend free.",
+    cta: "JOIN AS A MASTERCLASS MEMBER →",
+    trialNote: "Free trial for 10 days - no commitment",
   },
 } as const;
 

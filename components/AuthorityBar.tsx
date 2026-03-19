@@ -18,7 +18,7 @@ export function AuthorityBar() {
           ))}
         </div>
         <p className="mt-6 text-sm text-charcoal-mid">
-          {siteConfig.authorityBar.proof}
+          {`${siteConfig.stats.professionalsTrained} Professionals Trained  ·  ${siteConfig.stats.industriesServed} Industries Served  ·  ${siteConfig.stats.clientRetention} Client Retention`}
         </p>
       </div>
     </section>

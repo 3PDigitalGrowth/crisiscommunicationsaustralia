@@ -4,6 +4,10 @@ import { LeadMagnetTrigger } from "./LeadMagnetTrigger";
 import { ScrollButton } from "./ScrollButton";
 
 export function Footer() {
+  const copyrightLine = siteConfig.legal.abn
+    ? `© ${siteConfig.legal.copyrightYear} CRC PR Pty Ltd. All rights reserved. ABN: ${siteConfig.legal.abn}`
+    : `© ${siteConfig.legal.copyrightYear} CRC PR Pty Ltd. All rights reserved.`;
+
   return (
     <footer className="bg-[#111827] py-16 text-white">
       <div className="section-shell">
@@ -32,15 +36,21 @@ export function Footer() {
             </p>
             <div className="mt-4 space-y-3">
               {siteConfig.footer.ecosystemLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-sm text-off-white/70 hover:text-white"
-                >
-                  {link.label}
-                </a>
+                <div key={link.label}>
+                  <a
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block text-sm text-off-white/70 hover:text-white"
+                  >
+                    {link.label}
+                  </a>
+                  {"note" in link ? (
+                    <span className="mt-0.5 block text-[11px] text-off-white/40">
+                      {link.note}
+                    </span>
+                  ) : null}
+                </div>
               ))}
             </div>
 
@@ -73,12 +83,18 @@ export function Footer() {
               {siteConfig.footer.contactLabel}
             </p>
             <div className="mt-4 space-y-2 text-sm text-off-white/70">
-              <p>{siteConfig.address.company}</p>
-              <p>{`${siteConfig.address.city}, ${siteConfig.address.state}`}</p>
-              <p>{siteConfig.address.country}</p>
+              <address style={{ fontStyle: "normal" }}>
+                <p>{siteConfig.address.company}</p>
+                <p>{siteConfig.address.street}</p>
+                <p>{`${siteConfig.address.city} ${siteConfig.address.state} ${siteConfig.address.postcode}`}</p>
+                <p>{siteConfig.address.country}</p>
+              </address>
               <p>
                 Email:{" "}
-                <a href={`mailto:${siteConfig.email.general}`} className="hover:text-white">
+                <a
+                  href={`mailto:${siteConfig.email.general}`}
+                  className="hover:text-white"
+                >
                   {siteConfig.email.general}
                 </a>
               </p>
@@ -90,7 +106,10 @@ export function Footer() {
               </p>
               <p>
                 {siteConfig.footer.mediaEnquiriesPrefix}{" "}
-                <a href={`mailto:${siteConfig.email.media}`} className="hover:text-white">
+                <a
+                  href={`mailto:${siteConfig.email.media}`}
+                  className="hover:text-white"
+                >
                   {siteConfig.email.media}
                 </a>
               </p>
@@ -99,12 +118,22 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-[13px] md:flex-row md:items-center md:justify-between">
-          <p className="text-off-white/40">{siteConfig.footer.copyright}</p>
+          <p className="text-off-white/40">{copyrightLine}</p>
           <div className="flex flex-wrap gap-4 text-off-white/60">
-            <a href={siteConfig.links.privacyPolicyUrl} className="hover:text-white">
+            <a
+              href={siteConfig.links.privacyPolicyUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white"
+            >
               Privacy Policy
             </a>
-            <a href={siteConfig.links.termsUrl} className="hover:text-white">
+            <a
+              href={siteConfig.links.termsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white"
+            >
               Terms of Use
             </a>
             <a href={siteConfig.links.disclaimerUrl} className="hover:text-white">

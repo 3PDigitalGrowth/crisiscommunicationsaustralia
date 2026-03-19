@@ -64,6 +64,18 @@ export function UrgentPath() {
         })}
       </div>
 
+      <p className="mb-4 mt-4 text-[11px] leading-relaxed text-charcoal-mid">
+        {siteConfig.urgentPath.servicesCopy}{" "}
+        <a
+          href={siteConfig.links.crcPrServicesUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-brand-gold underline hover:opacity-80"
+        >
+          {siteConfig.urgentPath.servicesLinkLabel}
+        </a>
+      </p>
+
       <div className="mt-8">
         <p className="text-sm text-charcoal-mid">
           {siteConfig.urgentPath.phoneLabel}
