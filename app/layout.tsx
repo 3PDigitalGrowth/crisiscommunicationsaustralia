@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Inter, Roboto } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 
 import { Nav } from "@/components/Nav";
 import { siteConfig } from "@/config/site";
@@ -65,6 +66,7 @@ export default function RootLayout({
         <Nav />
         {children}
         <GoogleAnalytics gaId={siteConfig.analytics.ga4MeasurementId} />
+        <Analytics />
       </body>
     </html>
   );
