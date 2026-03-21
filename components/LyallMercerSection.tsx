@@ -16,7 +16,9 @@ export function LyallMercerSection() {
                 alt={siteConfig.lyall.imageAlt}
                 width={800}
                 height={1000}
-                className="rounded-lg object-cover shadow-panel"
+                unoptimized
+                sizes="(min-width: 768px) 40vw, 100vw"
+                className="h-auto w-full rounded-lg shadow-panel"
               />
             ) : (
               <div className="flex min-h-[420px] items-center justify-center rounded-lg bg-[#24395F] shadow-panel">
