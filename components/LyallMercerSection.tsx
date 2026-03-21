@@ -8,7 +8,7 @@ export function LyallMercerSection() {
   return (
     <section className="bg-navy-dark py-16 text-white md:py-24">
       <div className="section-shell">
-        <div className="grid gap-10 md:grid-cols-[0.9fr_1.1fr] md:items-start">
+        <div className="grid gap-10 md:grid-cols-[1fr_2fr] md:items-start">
           <div className="md:order-1">
             {siteConfig.assets.lyallMercerImage ? (
               <Image
@@ -17,7 +17,7 @@ export function LyallMercerSection() {
                 width={800}
                 height={1000}
                 unoptimized
-                sizes="(min-width: 768px) 40vw, 100vw"
+                sizes="(min-width: 768px) 33vw, 100vw"
                 className="h-auto w-full rounded-lg shadow-panel"
               />
             ) : (
