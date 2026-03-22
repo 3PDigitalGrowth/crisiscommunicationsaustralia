@@ -60,10 +60,16 @@ export function ProblemSection() {
               className="w-full sm:w-auto"
             />
             <ScrollButton
-              label={siteConfig.problem.links.prepared}
-              targetId={siteConfig.scrollTargets.prepared}
+              label={siteConfig.problem.links.readiness}
+              targetId={siteConfig.scrollTargets.readiness}
               variant="outline"
               icon="shield"
+              className="w-full sm:w-auto"
+            />
+            <ScrollButton
+              label={siteConfig.problem.links.masterclass}
+              targetId={siteConfig.scrollTargets.masterclass}
+              variant="text-teal"
               className="w-full sm:w-auto"
             />
           </div>

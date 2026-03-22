@@ -63,6 +63,11 @@ export function Footer() {
                 targetId={siteConfig.scrollTargets.urgent}
                 variant="text-gold"
               />
+              <ScrollButton
+                label={siteConfig.footer.quickActions.readiness}
+                targetId={siteConfig.scrollTargets.readiness}
+                variant="text-teal"
+              />
               <LeadMagnetTrigger
                 label={siteConfig.footer.quickActions.leadMagnet}
                 className="text-left text-sm text-brand-teal underline underline-offset-4 hover:text-brand-teal/80"

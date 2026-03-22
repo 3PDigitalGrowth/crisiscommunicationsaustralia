@@ -1,7 +1,6 @@
 import AnnualSummitBanner from "@/components/AnnualSummitBanner";
 import { AuthorityBar } from "@/components/AuthorityBar";
 import CaseStudies from "@/components/CaseStudies";
-import CrisisPreventionCallout from "@/components/CrisisPreventionCallout";
 import { DifferentiationSection } from "@/components/DifferentiationSection";
 import FAQSection from "@/components/FAQSection";
 import { FinalCTA } from "@/components/FinalCTA";
@@ -12,7 +11,7 @@ import { LyallMercerSection } from "@/components/LyallMercerSection";
 import MobileCallBar from "@/components/MobileCallBar";
 import { ProblemSection } from "@/components/ProblemSection";
 import { Testimonials } from "@/components/Testimonials";
-import { TwoPathSection } from "@/components/TwoPathSection";
+import { ThreePathSection } from "@/components/TwoPathSection";
 import { siteConfig } from "@/config/site";
 
 const jsonLd = {
@@ -50,9 +49,18 @@ const jsonLd = {
         "@type": "Offer",
         itemOffered: {
           "@type": "Service",
-          name: "Urgent Crisis Communications Consulting",
+          name: "Urgent Crisis & Issues Management Consulting",
           description:
-            "24/7 crisis communications advisory from CRC PR. Immediate response for media management, reputation protection, issues management, and crisis coordination.",
+            "24/7 crisis communications and issues management advisory from CRC PR. Immediate response for media management, reputation protection, and crisis coordination.",
+        },
+      },
+      {
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: "Crisis Readiness & Preparation",
+          description:
+            "Crisis communications plans, crisis prevention consultancy, vulnerability assessments, and crisis scenario exercises to prepare organisations before a crisis arrives.",
         },
       },
       {
@@ -61,7 +69,7 @@ const jsonLd = {
           "@type": "Course",
           name: "My PR Partner Crisis Masterclass",
           description:
-            "Practical crisis communications training for professionals and organisations. 12-month curriculum backed by CRC PR's 25-year consulting practice.",
+            "12-month professional development program for crisis leadership skills, featuring the Crisis Ready® course by Melissa Agnes. Backed by CRC PR's 25-year consulting practice.",
           offers: {
             "@type": "Offer",
             price: "340",
@@ -103,8 +111,7 @@ export default function Home() {
           <Hero />
           <AuthorityBar />
           <ProblemSection />
-          <TwoPathSection />
-          <CrisisPreventionCallout />
+          <ThreePathSection />
           <LyallMercerSection />
           <CaseStudies />
           <Testimonials />

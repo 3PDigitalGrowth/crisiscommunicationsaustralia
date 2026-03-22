@@ -131,7 +131,7 @@ export function LeadMagnetModal() {
             role="dialog"
             aria-modal="true"
             aria-labelledby="lead-magnet-title"
-            className="relative w-full max-w-md rounded-lg bg-white p-8 shadow-panel"
+            className="relative w-full max-w-sm max-h-[90vh] overflow-y-auto rounded-lg bg-white p-8 shadow-panel"
           >
             <button
               type="button"

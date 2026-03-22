@@ -31,17 +31,22 @@ export function Hero() {
               <p key={line}>{line}</p>
             ))}
           </div>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
             <ScrollButton
               label={siteConfig.hero.urgentCta}
               targetId={siteConfig.scrollTargets.urgent}
               icon="alert"
             />
             <ScrollButton
-              label={siteConfig.hero.preparedCta}
-              targetId={siteConfig.scrollTargets.prepared}
+              label={siteConfig.hero.readinessCta}
+              targetId={siteConfig.scrollTargets.readiness}
               icon="shield"
               variant="outline"
+            />
+            <ScrollButton
+              label={siteConfig.hero.masterclassCta}
+              targetId={siteConfig.scrollTargets.masterclass}
+              variant="text-teal"
             />
           </div>
           <div className="mt-10 max-w-copy-md">
@@ -53,10 +58,11 @@ export function Hero() {
         </div>
       </div>
 
-      <div className="absolute right-0 top-0 bottom-0 z-[1] hidden w-[42%] md:block">
+      {/* TODO: CLIENT TO PROVIDE HIGHER-RES IMAGE */}
+      <div className="absolute bottom-0 right-0 top-0 z-[1] hidden w-[42%] md:block">
         <Image
           src="/images/lyall-mercer.jpg"
-          alt="Lyall Mercer — founder of CRC PR and Australasia's leading crisis communications advisor"
+          alt="Lyall Mercer - founder of CRC PR and Australasia's leading crisis communications advisor"
           fill
           priority
           sizes="42vw"

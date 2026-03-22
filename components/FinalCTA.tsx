@@ -24,10 +24,15 @@ export function FinalCTA() {
               icon="alert"
             />
             <ScrollButton
-              label={siteConfig.finalCta.preparedLabel}
-              targetId={siteConfig.scrollTargets.prepared}
+              label={siteConfig.finalCta.readinessLabel}
+              targetId={siteConfig.scrollTargets.readiness}
               icon="shield"
               variant="outline"
+            />
+            <ScrollButton
+              label={siteConfig.finalCta.masterclassLabel}
+              targetId={siteConfig.scrollTargets.masterclass}
+              variant="text-teal"
             />
           </div>
           <p className="mt-8 text-[15px] text-off-white/70">

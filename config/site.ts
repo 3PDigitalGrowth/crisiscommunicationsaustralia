@@ -1,5 +1,6 @@
 const urgentPathId = "urgent-path";
-const preparedPathId = "prepared-path";
+const readinessPathId = "readiness-path";
+const masterclassPathId = "masterclass-path";
 
 export const siteConfig = {
   brand: {
@@ -12,7 +13,8 @@ export const siteConfig = {
     display: "1300 182 186",
     href: "tel:1300182186",
     availability: "Available 24 hours, 7 days",
-    responseCommitment: "We answer. If unavailable, we call back within the hour.",
+    responseCommitment:
+      "We answer. If unavailable, we will return your call as soon as possible.",
     navLabel: "URGENT SUPPORT: 1300 182 186",
   },
   email: {
@@ -42,6 +44,8 @@ export const siteConfig = {
     lyallTwitter: "https://twitter.com/Lyall_Mercer",
     crcPrUrl: "https://crcpr.com.au",
     crcPrServicesUrl: "https://crcpr.com.au/services/",
+    crcPrCrisisUrl: "https://crcpr.com.au/crisis",
+    crcPrContactUrl: "https://crcpr.com.au/contact/",
     crcPrPacificUrl: "https://crcpr.com.au/pacific/",
     myPrPartnerUrl: "https://myprpartner.com",
     masterclassUrl: "https://myprpartner.com/crisis-masterclass/",
@@ -55,7 +59,7 @@ export const siteConfig = {
     copyrightYear: "2026",
   },
   assets: {
-    lyallMercerImage: "/images/lyall-mercer.jpg",
+    lyallMercerImage: "/images/lyall-mercer.jpg", // TODO: CLIENT TO PROVIDE HIGHER-RES IMAGE
     ogImage: "/images/og-image.jpg", // TODO: CLIENT TO PROVIDE
   },
   stats: {
@@ -83,69 +87,60 @@ export const siteConfig = {
   coFounderName: "Barbara Gorogh",
   mediaOutlets: ["ABC News", "The Australian", "Sky News", "AFR", "ABC Radio"],
   mediaLinks: [
-    {
-      name: "ABC News",
-      href: "https://lyallmercer.com",
-    },
-    {
-      name: "The Australian",
-      href: "https://lyallmercer.com",
-    },
-    {
-      name: "Sky News",
-      href: "https://lyallmercer.com",
-    },
-    {
-      name: "AFR",
-      href: "https://lyallmercer.com",
-    },
-    {
-      name: "ABC Radio",
-      href: "https://lyallmercer.com",
-    },
+    { name: "ABC News", href: "https://lyallmercer.com" },
+    { name: "The Australian", href: "https://lyallmercer.com" },
+    { name: "Sky News", href: "https://lyallmercer.com" },
+    { name: "AFR", href: "https://lyallmercer.com" },
+    { name: "ABC Radio", href: "https://lyallmercer.com" },
   ],
   scrollTargets: {
     urgent: urgentPathId,
-    prepared: preparedPathId,
+    readiness: readinessPathId,
+    masterclass: masterclassPathId,
   },
   seo: {
-    title: "Crisis Communications Australia | Crisis PR Consultants & Training",
+    title:
+      "Crisis Communications Australia | Crisis & Issues Management, Planning & Training",
     description:
-      "Australia's leading crisis communications and crisis PR consultants. Immediate 24/7 crisis management support from CRC PR - call 1300 182 186 - or build your team's skills with the My PR Partner Crisis Masterclass, featuring the exclusive Crisis Ready® course by Melissa Agnes.",
+      "Australia's leading crisis communications and issues management consultants. Immediate 24/7 crisis response from CRC PR - call 1300 182 186 - crisis readiness planning and preparation - or develop your team's crisis leadership skills with the My PR Partner Crisis Masterclass.",
     keywords:
-      "crisis communications australia, crisis PR, crisis management, crisis communications training, crisis consultant australia, crisis public relations",
+      "crisis communications australia, crisis PR, crisis management, issues management, crisis communications planning, crisis consultant australia, crisis public relations, crisis readiness",
     ogTitle: "Crisis Communications Australia",
     ogDescription:
-      "Australia's leading crisis communications and crisis PR consultants, with urgent crisis management support and expert training.",
+      "Australia's leading crisis communications and issues management consultants. Urgent response, crisis readiness planning, and professional development training.",
   },
   hero: {
-    eyebrow: "A DIVISION OF CRC PR, AUSTRALIA'S LEADING CRISIS & PR ADVISORY FIRM",
+    eyebrow:
+      "A DIVISION OF CRC PR, AUSTRALIA'S LEADING CRISIS & PR ADVISORY FIRM",
     heading: ["Crisis Communications", "Australia"],
     subheading: [
       "The right response, right now.",
-      "The right training, before you need it.",
+      "The right preparation, before you need it.",
+      "The right skills, for when it matters most.",
     ],
     urgentCta: "I NEED HELP NOW",
-    preparedCta: "I WANT TO BE READY",
+    readinessCta: "I WANT TO BE PREPARED",
+    masterclassCta: "DEVELOP MY SKILLS",
     authorityCopy:
-      "Backed by 25 years of crisis consulting. Trusted by companies, governments, industry associations, and organisations across Australia, the Pacific, and beyond.",
+      "Backed by 25 years of crisis and issues management consulting. Trusted by companies, governments, industry associations, and organisations across Australia, the Pacific, and beyond.",
   },
   authorityBar: {
     label: "LYALL MERCER, AS SEEN IN",
   },
   problem: {
-    heading: ["A crisis doesn't wait", "for business hours."],
+    heading: ["A crisis or major issue doesn't", "wait for business hours."],
     paragraphs: [
       "A data breach discovered at 2 AM. A product recall breaking on a Friday afternoon. A viral social media post that begins as a rumour and ends as a headline. A disgruntled employee. A workplace accident. A regulator on the phone.",
-      "Your reputation, built over years, sometimes decades, can unravel in a single news cycle.",
-      "The question is never if a crisis will come. The question is whether you will be ready when it does.",
+      "Not every challenging situation is a full-blown crisis, but even a manageable issue can create serious reputational damage if it is not handled correctly. One of the first things we do is define whether you are facing a manageable issue or a crisis, and then act accordingly.",
+      "Your reputation, built over years, sometimes decades, can unravel in a single news cycle. The question is never if a crisis or major issue will come. The question is whether you will be ready when it does.",
     ],
     managementHeading:
-      "Australia's most trusted crisis management and communications team.",
+      "Australia's most trusted crisis management, issues management, and communications team.",
     prompt: "Which situation describes you right now?",
     links: {
       urgent: "I'm in a crisis right now",
-      prepared: "I want to be prepared before it happens",
+      readiness: "I want to be prepared before it happens",
+      masterclass: "I want to develop crisis leadership skills",
     },
     crisisClock: {
       label: "THE MOMENT IT HITS",
@@ -171,11 +166,11 @@ export const siteConfig = {
   },
   urgentPath: {
     id: urgentPathId,
-    label: "FOR IMMEDIATE CRISIS RESPONSE",
+    label: "FOR IMMEDIATE CRISIS & ISSUE RESPONSE",
     heading: ["You Need Help.", "Right Now."],
     paragraphs: [
-      "When a crisis breaks, the first 15 minutes are critical. The decisions made, or not made, in that window will define the outcome.",
-      "CRC PR's advisers have been in the room when it matters most. Lyall Mercer and his team have managed crises for companies, governments, industry associations, schools, faith-based organisations, legal firms, celebrities, and sporting figures across Australia, the Pacific, and internationally.",
+      "When a crisis or major issue breaks, the first 15 minutes are critical. The decisions made, or not made, in that window will define the outcome.",
+      "CRC PR's advisers have been in the room when it matters most. Lyall Mercer and his team have managed crises and complex issues for companies, governments, industry associations, schools, faith-based organisations, legal firms, celebrities, and sporting figures across Australia, the Pacific, and internationally.",
       "We will manage the media. Protect your reputation. Guide every decision. And we do it with absolute confidentiality.",
     ],
     trustSignals: [
@@ -193,7 +188,8 @@ export const siteConfig = {
       organisation: "Organisation",
       phone: "Phone Number",
       message: "Nature of Situation",
-      messagePlaceholder: "Brief description - optional. We will call you to discuss.",
+      messagePlaceholder:
+        "Brief description - optional. We will call you to discuss.",
       submitLabel: "GET HELP NOW →",
       successMessage: "Message received.",
       errorMessage:
@@ -201,22 +197,57 @@ export const siteConfig = {
     },
     successState: {
       heading: "Message received.",
-      body:
-        "A CRC PR adviser will call you within the hour. If your situation is immediately urgent, call us directly now.",
+      body: "A CRC PR adviser will return your call as soon as possible. If your situation is immediately urgent, call us directly now.",
       ctaLabel: "CALL 1300 182 186",
     },
     confidentialityNote:
       "Everything shared with CRC PR is treated with strict confidentiality. We do not reference client engagements without explicit written permission. Our advisers operate with the same professional discretion as legal counsel.",
     footer:
-      "A division of CRC PR, trusted crisis advisory across Australia, the Pacific, and internationally for over 25 years.",
+      "A division of CRC PR, trusted crisis and issues advisory across Australia, the Pacific, and internationally for over 25 years.",
+  },
+  readinessPath: {
+    id: readinessPathId,
+    label: "FOR CRISIS READINESS & PREPARATION",
+    heading: ["Be Ready Before", "It Happens."],
+    paragraphs: [
+      "Most crises and major issues are preventable, or at least manageable, when you have the right plan in place. CRC PR helps organisations prepare before the call comes.",
+      "We develop practical, workable crisis communications plans. We run crisis prevention consultancy and vulnerability assessments to identify where your organisation is exposed. And we conduct crisis scenario exercises so your team knows exactly what to do when it matters.",
+    ],
+    services: [
+      {
+        title: "Crisis Communications Plans",
+        description:
+          "Practical, workable plans that ensure you and your team are ready when faced with an issue or crisis that could damage your reputation, revenue, and future viability.",
+      },
+      {
+        title: "Crisis Prevention Consultancy",
+        description:
+          "We assess the risks to your reputation, identify vulnerabilities, and help you communicate your actions to stakeholders, building trust in your brand before a crisis ever arrives.",
+      },
+      {
+        title: "Crisis Scenario Exercises",
+        description:
+          "Realistic scenario-based exercises that test your team's readiness and decision-making under pressure, so you are not learning on the job when it counts.",
+      },
+      {
+        title: "Issues & Vulnerability Assessment",
+        description:
+          "A confidential review of your real risk areas, conducted by Australia's most experienced crisis and issues management advisers.",
+      },
+    ],
+    primaryCta: "DISCUSS YOUR READINESS WITH CRC PR →",
+    primaryCtaSubtext:
+      "Confidential. No obligation. We will assess your situation and recommend the right approach.",
+    footer:
+      "Delivered by CRC PR, Australia's most experienced crisis and issues management advisory firm. Over 25 years of frontline experience.",
   },
   preparedPath: {
-    id: preparedPathId,
-    label: "FOR PROACTIVE CRISIS PREPARATION",
-    heading: ["Be Ready Before", "The Crisis Hits."],
+    id: masterclassPathId,
+    label: "FOR PERSONAL & TEAM CRISIS LEADERSHIP",
+    heading: ["Develop Crisis", "Leadership Skills."],
     paragraphs: [
-      "Most Australian businesses are one incident away from a reputational crisis they are not equipped to handle.",
-      "The My PR Partner Crisis Masterclass gives comms leads, HR managers, school principals, SME owners, executive teams, and industry association staff the practical skills to prepare for, manage, and recover from any crisis, taught by the firm that has handled crises across Australia and internationally for over 25 years.",
+      "Whether you are a communications professional, HR manager, school principal, SME owner, or executive team member, the ability to lead through a crisis or major issue is a career-defining skill.",
+      "The My PR Partner Crisis Masterclass gives you and your team the practical skills to prepare for, manage, and recover from any reputational crisis or issue, taught by the firm that has handled crises across Australia and internationally for over 25 years.",
       "This is not theory. This is war-room methodology, made accessible.",
     ],
     highlights: [
@@ -260,19 +291,20 @@ export const siteConfig = {
   },
   lyall: {
     eyebrow: "GUIDED BY EXPERIENCE",
-    heading: ["The Adviser", "Behind Both Paths."],
+    heading: ["The Adviser", "Behind All Three Paths."],
     paragraphs: [
       "Lyall Mercer began his career as a journalist, writing for some of Australia's leading newspapers. That foundation, understanding exactly how media thinks, moves, and decides what becomes a story, is what makes his approach to crisis communications unlike any other.",
       "Over the past 25 years, Lyall has built a reputation across Australasia as a leader in corporate public relations, reputation and issues management, and crisis communications. His clients include national and international companies, governments, senior executives, politicians, celebrities, and sporting figures, and he has worked with clients and media on every continent.",
       "He has guided organisations through royal commissions, high-profile legal cases, serious allegations, political controversies, industrial relations crises, and social media firestorms. He has coordinated international media conferences and trained corporate and non-profit leaders across Australia, the USA, and Canada.",
       "His commentary on crisis and reputation has appeared on ABC News, Sky News, The Australian, the AFR, and ABC Radio.",
-      "The Crisis Masterclass and the advisory practice behind this page are both built on one body of methodology, Lyall's.",
+      "The Crisis Masterclass, the readiness advisory, and the crisis response practice behind this page are all built on one body of methodology, Lyall's.",
     ],
     quote:
       "\"You have 15 minutes to respond to an emerging crisis before you start to lose control of the message.\"",
     attribution: "Lyall Mercer",
     urgentLink: "→ Work with Lyall directly via CRC PR",
-    preparedLink: "→ Learn from Lyall in the Crisis Masterclass",
+    readinessLink: "→ Prepare your organisation with CRC PR",
+    masterclassLink: "→ Learn from Lyall in the Crisis Masterclass",
     placeholderInitials: "LM",
     imageAlt:
       "Lyall Mercer, founder of CRC PR, Australasia's leading crisis communications adviser and former journalist",
@@ -344,41 +376,40 @@ export const siteConfig = {
   },
   differentiation: {
     eyebrow: "THE CRISIS COMMS AUSTRALIA DIFFERENCE",
-    heading: ["Not a course. Not a retainer.", "The only ecosystem of its kind."],
+    heading: [
+      "Not just a course. Not just a retainer.",
+      "The only ecosystem of its kind.",
+    ],
     cards: [
       {
         icon: "building",
         title: "25 Years of Real Cases",
-        body:
-          "Not US content. Not academic theory. Australian crises, international media, real legal and regulatory pressure - taught by the practitioner who was actually there. Lyall began his career as a journalist, giving him an understanding of media that no course can replicate.",
+        body: "Not US content. Not academic theory. Australian crises, international media, real legal and regulatory pressure - taught by the practitioner who was actually there. Lyall began his career as a journalist, giving him an understanding of media that no course can replicate.",
       },
       {
         icon: "users",
-        title: "Two Paths. One Ecosystem.",
-        body:
-          "Whether you need a consultant on the phone at 2 AM or a 12-month curriculum for your team, this is the only place in Australia where both options exist under one roof, and are connected by a single 25-year body of methodology.",
+        title: "Three Paths. One Ecosystem.",
+        body: "Whether you need a consultant on the phone right now, a crisis communications plan and readiness review for your organisation, or a 12-month professional development program for your team - this is the only place in Australia where all three exist under one roof, connected by a single 25-year body of methodology.",
       },
       {
         icon: "dollar",
         title: "Accessible Without Being Cheap",
-        body:
-          "Boutique consultancies charge $5K-$20K/month. Generic courses charge $20. The Crisis Masterclass at $340/month - annual subscription, free for 10 days - gives you practitioner-grade content and a global curriculum without the retainer.",
+        body: "Boutique consultancies charge $5K-$20K/month. Generic courses charge $20. The Crisis Masterclass at $340/month - annual subscription, free for 10 days - gives you practitioner-grade content and a global curriculum without the retainer.",
       },
       {
         icon: "globe",
         title: "Every Sector. Every Continent.",
-        body:
-          "From ASX companies and government departments to schools, faith-based organisations, sporting bodies, and Pacific governments across Cook Islands, Fiji, Papua New Guinea, Samoa, Tonga, Vanuatu, and beyond - CRC PR has advised clients across every sector and worked with media on every continent.",
+        body: "From ASX companies and government departments to schools, faith-based organisations, sporting bodies, and Pacific governments across Cook Islands, Fiji, Papua New Guinea, Samoa, Tonga, Vanuatu, and beyond - CRC PR has advised clients across every sector and worked with media on every continent.",
       },
     ],
   },
   finalCta: {
     eyebrow: "THE DECISION",
     heading: "Choose Your Path.",
-    body:
-      "There is no wrong answer. Only the answer you choose before a crisis strikes, or the one you're forced to make when it already has.",
+    body: "There is no wrong answer. Only the answer you choose before a crisis or major issue strikes, or the one you're forced to make when it already has.",
     urgentLabel: "I NEED URGENT HELP",
-    preparedLabel: "I WANT TO GET PREPARED",
+    readinessLabel: "I WANT TO BE PREPARED",
+    masterclassLabel: "DEVELOP MY SKILLS",
     leadPrefix: "Not ready to decide?",
     leadLink: "Start with our free Crisis Readiness Checklist",
   },
@@ -396,7 +427,7 @@ export const siteConfig = {
       {
         question: "What does a crisis communications consultant do?",
         answer:
-          "A crisis communications consultant advises organisations before, during, and after a crisis. Before a crisis, they assess vulnerabilities, build crisis communications plans, and run training and simulation exercises. During a crisis, they coordinate the media response, manage messaging across all stakeholder groups, advise spokespeople, and guide executive decision-making in real time. After a crisis, they manage reputation recovery and analyse what can be improved for next time.",
+          "A crisis communications consultant advises organisations before, during, and after a crisis or major issue. Before a crisis, they assess vulnerabilities, build crisis communications plans, and run training and simulation exercises. During a crisis, they coordinate the media response, manage messaging across all stakeholder groups, advise spokespeople, and guide executive decision-making in real time. After a crisis, they manage reputation recovery and analyse what can be improved for next time.",
         schemaAnswer:
           "A crisis communications consultant advises organisations before, during, and after a crisis. Before a crisis, they assess vulnerabilities, build crisis communications plans, and run training and simulation exercises. During a crisis, they coordinate the media response, manage messaging, advise spokespeople, and guide executive decision-making in real time.",
       },
@@ -408,25 +439,35 @@ export const siteConfig = {
           "The first 15 minutes after a crisis breaks are critical. Organisations that fail to respond within this window begin to lose control of the narrative. A prepared organisation with a crisis communications plan and trained spokespeople can respond rapidly, calmly, and effectively.",
       },
       {
-        question: "How much does crisis PR and crisis communications advice cost in Australia?",
+        question:
+          "How much does crisis PR and crisis communications advice cost in Australia?",
         answer:
           "The cost of crisis communications support in Australia varies significantly depending on the scale and duration of the situation. Boutique crisis PR firms typically charge between $5,000 and $20,000 per month for ongoing retainer arrangements. For specific crisis incidents, project-based engagements are common. CRC PR provides confidential consultations to discuss the right approach for your situation - contact us directly on 1300 182 186.",
         schemaAnswer:
           "Boutique crisis PR firms typically charge between $5,000 and $20,000 per month for ongoing retainer arrangements. CRC PR provides confidential consultations to discuss the right approach for your situation - contact us directly on 1300 182 186.",
       },
       {
-        question: "What is the difference between crisis communications and issues management?",
+        question:
+          "What is the difference between a crisis and an issue?",
         answer:
-          "Issues management is proactive - it involves identifying potential problems before they escalate and developing strategies to address them. Crisis communications is reactive - it kicks in when an issue has already broken publicly and requires immediate response. The best outcomes occur when organisations invest in issues management so that crises are either prevented entirely or managed from a position of preparation rather than panic.",
+          "Not every challenging situation is a full-blown crisis. An issue is a problem that, if not managed, could escalate and cause reputational damage, but it may still be containable with the right strategy. A crisis is an acute situation that has already broken publicly and requires immediate, coordinated response. Issues management is proactive - identifying and addressing problems before they escalate. Crisis communications is reactive - it kicks in when the situation demands an immediate response. CRC PR helps organisations with both.",
         schemaAnswer:
-          "Issues management is proactive - it involves identifying potential problems before they escalate. Crisis communications is reactive - it kicks in when an issue has already broken publicly and requires immediate response.",
+          "An issue is a problem that could cause reputational damage but may be containable with the right strategy. A crisis is an acute situation requiring immediate response. Issues management is proactive; crisis communications is reactive. CRC PR helps with both.",
+      },
+      {
+        question:
+          "What crisis readiness and preparation services does CRC PR offer?",
+        answer:
+          "CRC PR offers a comprehensive suite of crisis readiness services: crisis communications plans tailored to your organisation, crisis prevention consultancy and vulnerability assessments, crisis scenario exercises, media training for spokespeople, and ongoing issues management advisory. These services help organisations prepare before a crisis or major issue arrives, so your team knows exactly what to do when it matters.",
+        schemaAnswer:
+          "CRC PR offers crisis communications plans, crisis prevention consultancy, vulnerability assessments, crisis scenario exercises, media training, and issues management advisory to prepare organisations before a crisis arrives.",
       },
       {
         question: "What is the My PR Partner Crisis Masterclass?",
         answer:
-          "The My PR Partner Crisis Masterclass is a 12-month online training program that gives communications professionals, HR managers, school leaders, SME owners, and executive teams the practical skills to prepare for, manage, and recover from any reputational crisis. It features the exclusive Crisis Ready® course presented by Melissa Agnes of the Crisis Ready Institute USA, quarterly live webinars, monthly Q&A sessions, and fortnightly training resources from Lyall Mercer. The program is backed by CRC PR's 25 years of frontline crisis consulting experience and is available exclusively in Australasia through My PR Partner.",
+          "The My PR Partner Crisis Masterclass is a 12-month online professional development program that gives communications professionals, HR managers, school leaders, SME owners, and executive teams the practical skills to lead through a crisis or major issue. It features the exclusive Crisis Ready® course presented by Melissa Agnes of the Crisis Ready Institute USA, quarterly live webinars, monthly Q&A sessions, and fortnightly training resources from Lyall Mercer. The program is backed by CRC PR's 25 years of frontline crisis consulting experience and is available exclusively in Australasia through My PR Partner.",
         schemaAnswer:
-          "The My PR Partner Crisis Masterclass is a 12-month online training program featuring the exclusive Crisis Ready® course by Melissa Agnes of the Crisis Ready Institute USA, backed by CRC PR's 25 years of frontline crisis consulting experience. Available exclusively in Australasia.",
+          "The My PR Partner Crisis Masterclass is a 12-month professional development program featuring the exclusive Crisis Ready® course by Melissa Agnes of the Crisis Ready Institute USA, backed by CRC PR's 25 years of crisis consulting experience. Available exclusively in Australasia.",
       },
       {
         question: "Does CRC PR work with organisations outside Australia?",
@@ -458,25 +499,18 @@ export const siteConfig = {
     ],
     quickActions: {
       urgent: "Get Urgent Crisis Help",
+      readiness: "Discuss Crisis Readiness",
       leadMagnet: "Download Crisis Readiness Checklist",
       masterclass: "View the Crisis Masterclass",
     },
     description:
-      "A division of CRC PR - trusted crisis and corporate communications advisory across Australia, the Pacific, and internationally.",
+      "A division of CRC PR - trusted crisis, issues management, and corporate communications advisory across Australia, the Pacific, and internationally.",
     mediaEnquiriesPrefix: "For media enquiries:",
-  },
-  crisisPreventionCallout: {
-    eyebrow: "A third option",
-    heading: "Not in crisis. Not sure you're ready.",
-    body:
-      "Most crises are preventable. CRC PR's Crisis Prevention Consultancy and Vulnerability Assessment identifies where your organisation is exposed - before the media call comes. It's a confidential, practical review of your real risk areas, conducted by Australia's most experienced crisis advisors.",
-    cta: "Learn about Crisis Prevention Consultancy at CRC PR →",
   },
   annualSummit: {
     eyebrow: "Annual event",
     heading: ["Crisis Communications", "Australia Annual Summit"],
-    body:
-      "The premier crisis communications event in the Oceania region. Masterclass members attend free.",
+    body: "The premier crisis communications event in the Oceania region. Masterclass members attend free.",
     cta: "JOIN AS A MASTERCLASS MEMBER →",
     trialNote: "Free trial for 10 days - no commitment",
   },
