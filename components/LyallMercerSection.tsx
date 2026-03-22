@@ -73,17 +73,20 @@ export function LyallMercerSection() {
               <ScrollButton
                 label={siteConfig.lyall.urgentLink}
                 targetId={siteConfig.scrollTargets.urgent}
-                variant="text-gold"
+                variant="solid"
+                className="w-full sm:w-auto"
               />
               <ScrollButton
                 label={siteConfig.lyall.readinessLink}
                 targetId={siteConfig.scrollTargets.readiness}
-                variant="text-teal"
+                variant="outline"
+                className="w-full sm:w-auto"
               />
               <ScrollButton
                 label={siteConfig.lyall.masterclassLink}
                 targetId={siteConfig.scrollTargets.masterclass}
-                variant="text-teal"
+                variant="outline"
+                className="w-full sm:w-auto"
               />
             </div>
           </div>

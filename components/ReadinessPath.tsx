@@ -8,7 +8,7 @@ export function ReadinessPath() {
   return (
     <div
       id={siteConfig.readinessPath.id}
-      className="border-t-4 border-brand-teal bg-white px-0 pt-8"
+      className="flex h-full w-full flex-col border-t-4 border-brand-teal bg-white px-0 pt-8"
     >
       <p className="font-heading text-xs font-black uppercase tracking-[0.28em] text-brand-teal">
         {siteConfig.readinessPath.label}
@@ -44,21 +44,23 @@ export function ReadinessPath() {
         })}
       </div>
 
-      <a
-        href={siteConfig.links.crcPrCrisisUrl}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="mt-8 block w-full rounded-[4px] bg-brand-teal py-4 text-center font-heading text-sm font-black uppercase tracking-widest text-white transition-opacity hover:opacity-90"
-      >
-        {siteConfig.readinessPath.primaryCta}
-      </a>
-      <p className="mt-2 text-center text-xs leading-relaxed text-charcoal-mid">
-        {siteConfig.readinessPath.primaryCtaSubtext}
-      </p>
+      <div className="mt-auto pt-8">
+        <a
+          href={siteConfig.links.crcPrCrisisUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full rounded-[4px] bg-brand-teal py-4 text-center font-heading text-sm font-black uppercase tracking-widest text-white transition-opacity hover:opacity-90"
+        >
+          {siteConfig.readinessPath.primaryCta}
+        </a>
+        <p className="mt-2 text-center text-xs leading-relaxed text-charcoal-mid">
+          {siteConfig.readinessPath.primaryCtaSubtext}
+        </p>
 
-      <p className="mt-4 text-[11px] italic leading-relaxed text-charcoal-mid">
-        {siteConfig.readinessPath.footer}
-      </p>
+        <p className="mt-4 text-[11px] italic leading-relaxed text-charcoal-mid">
+          {siteConfig.readinessPath.footer}
+        </p>
+      </div>
     </div>
   );
 }

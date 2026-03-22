@@ -7,13 +7,13 @@ export function ThreePathSection() {
     <section className="bg-white py-16 md:py-24">
       <div className="section-shell">
         <div className="grid gap-12 md:grid-cols-3 md:gap-8">
-          <div>
+          <div className="flex">
             <UrgentPath />
           </div>
-          <div className="border-border md:border-l md:pl-8">
+          <div className="flex border-border md:border-l md:pl-8">
             <ReadinessPath />
           </div>
-          <div className="border-border md:border-l md:pl-8">
+          <div className="flex border-border md:border-l md:pl-8">
             <PreparedPath />
           </div>
         </div>

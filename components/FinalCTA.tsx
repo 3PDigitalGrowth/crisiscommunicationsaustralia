@@ -7,7 +7,7 @@ export function FinalCTA() {
   return (
     <section className="bg-navy-dark py-16 text-white md:py-24">
       <div className="section-shell">
-        <div className="mx-auto max-w-3xl text-center">
+        <div className="mx-auto max-w-5xl text-center">
           <p className="section-eyebrow text-brand-teal">
             {siteConfig.finalCta.eyebrow}
           </p>
@@ -17,7 +17,7 @@ export function FinalCTA() {
           <p className="mx-auto mt-4 max-w-[32rem] text-lg leading-[1.7] text-off-white">
             {siteConfig.finalCta.body}
           </p>
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
+          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row md:flex-nowrap">
             <ScrollButton
               label={siteConfig.finalCta.urgentLabel}
               targetId={siteConfig.scrollTargets.urgent}
@@ -32,7 +32,7 @@ export function FinalCTA() {
             <ScrollButton
               label={siteConfig.finalCta.masterclassLabel}
               targetId={siteConfig.scrollTargets.masterclass}
-              variant="text-teal"
+              variant="outline"
             />
           </div>
           <p className="mt-8 text-[15px] text-off-white/70">

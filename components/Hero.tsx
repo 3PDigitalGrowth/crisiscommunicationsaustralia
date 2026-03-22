@@ -7,7 +7,7 @@ import { ScrollButton } from "./ScrollButton";
 export function Hero() {
   return (
     <section className="relative min-h-[72vh] overflow-hidden bg-navy-dark text-white md:min-h-[78vh]">
-      <div className="relative z-[10] mx-auto flex h-full w-full max-w-7xl flex-col justify-center px-6 py-20 md:w-[58%] md:py-24">
+      <div className="relative z-[10] mx-auto flex h-full w-full max-w-7xl flex-col justify-center px-6 py-20 md:w-[68%] md:py-24">
         <div
           className="pointer-events-none absolute bottom-12 left-6 z-[3] h-px w-12 bg-brand-gold opacity-30"
           aria-hidden="true"
@@ -18,7 +18,7 @@ export function Hero() {
           style={{ background: "rgba(7,175,187,0.05)" }}
         />
 
-        <div className="relative z-[10] max-w-copy-lg">
+        <div className="relative z-[10] max-w-[52rem]">
           <p className="section-eyebrow text-brand-teal">
             {siteConfig.hero.eyebrow}
           </p>
@@ -31,7 +31,7 @@ export function Hero() {
               <p key={line}>{line}</p>
             ))}
           </div>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+          <div className="mt-10 flex flex-col gap-4 sm:flex-row md:flex-nowrap">
             <ScrollButton
               label={siteConfig.hero.urgentCta}
               targetId={siteConfig.scrollTargets.urgent}
@@ -46,7 +46,7 @@ export function Hero() {
             <ScrollButton
               label={siteConfig.hero.masterclassCta}
               targetId={siteConfig.scrollTargets.masterclass}
-              variant="text-teal"
+              variant="outline"
             />
           </div>
           <div className="mt-10 max-w-copy-md">

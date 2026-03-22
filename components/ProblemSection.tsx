@@ -69,7 +69,7 @@ export function ProblemSection() {
             <ScrollButton
               label={siteConfig.problem.links.masterclass}
               targetId={siteConfig.scrollTargets.masterclass}
-              variant="text-teal"
+              variant="outline"
               className="w-full sm:w-auto"
             />
           </div>

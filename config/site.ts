@@ -72,7 +72,7 @@ export const siteConfig = {
   masterclass: {
     price: "$340",
     billing: "per month",
-    commitment: "annual subscription",
+    commitment: "monthly investment or annual payment",
     trialDays: "10",
     trialCopy: "Full access. No charge for 10 days.",
   },
@@ -253,7 +253,7 @@ export const siteConfig = {
     highlights: [
       "Exclusive Crisis Ready® 12-month course - presented by Melissa Agnes, Crisis Ready Institute USA",
       "Australian context, local law, media landscape, and real case studies",
-      "From $340/month - paid as an annual subscription. Try free for 10 days.",
+      "From $340/month, with the option to pay monthly or annually. Try free for 10 days.",
     ],
     melissaLabel: "In partnership with",
     melissaHeading: "Crisis Ready® Institute USA",
@@ -262,7 +262,7 @@ export const siteConfig = {
     badge: "Powered by CRC PR",
     primaryCta: "START FREE FOR 10 DAYS →",
     primaryCtaSubtext:
-      "Full access. No charge for 10 days. Annual subscription from $340/month thereafter.",
+      "Full access. No charge for 10 days. Then continue from $340/month, paid monthly or annually.",
     secondaryPrefix: "Not ready to commit?",
     secondaryLink: "Download our free Crisis Readiness Checklist →",
     footer:
@@ -394,7 +394,7 @@ export const siteConfig = {
       {
         icon: "dollar",
         title: "Accessible Without Being Cheap",
-        body: "Boutique consultancies charge $5K-$20K/month. Generic courses charge $20. The Crisis Masterclass at $340/month - annual subscription, free for 10 days - gives you practitioner-grade content and a global curriculum without the retainer.",
+        body: "Boutique consultancies charge $5K-$20K/month. Generic courses charge $20. The Crisis Masterclass, from $340/month with the option to pay monthly or annually, gives you practitioner-grade content and a global curriculum without the retainer.",
       },
       {
         icon: "globe",
