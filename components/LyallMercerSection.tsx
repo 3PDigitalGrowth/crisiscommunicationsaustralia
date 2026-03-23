@@ -28,7 +28,7 @@ export function LyallMercerSection() {
               </div>
             )}
 
-            <div className="mt-8 grid gap-4 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3">
+            <div className="mt-8 flex flex-col gap-6">
               {siteConfig.lyall.statLabels.map((stat) => (
                 <div key={stat.label} className="min-w-0">
                   <p className="font-heading text-4xl font-black text-brand-teal">
