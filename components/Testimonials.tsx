@@ -31,12 +31,16 @@ export function Testimonials() {
               <p className="mt-6 text-[15px] font-medium text-charcoal">
                 {card.name}
               </p>
-              <p className="mt-1 text-[13px] text-charcoal-mid">
-                {card.role}
-              </p>
-              <p className="mt-1 text-[13px] text-charcoal-mid">
-                {card.company}
-              </p>
+              {card.role ? (
+                <p className="mt-1 text-[13px] text-charcoal-mid">
+                  {card.role}
+                </p>
+              ) : null}
+              {card.company ? (
+                <p className="mt-1 text-[13px] text-charcoal-mid">
+                  {card.company}
+                </p>
+              ) : null}
             </article>
           ))}
         </div>

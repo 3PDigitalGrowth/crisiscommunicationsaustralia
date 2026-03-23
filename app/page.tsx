@@ -1,4 +1,3 @@
-import AnnualSummitBanner from "@/components/AnnualSummitBanner";
 import { AuthorityBar } from "@/components/AuthorityBar";
 import CaseStudies from "@/components/CaseStudies";
 import { DifferentiationSection } from "@/components/DifferentiationSection";
@@ -51,7 +50,7 @@ const jsonLd = {
           "@type": "Service",
           name: "Urgent Crisis & Issues Management Consulting",
           description:
-            "24/7 crisis communications and issues management advisory from CRC PR. Immediate response for media management, reputation protection, and crisis coordination.",
+            "Urgent crisis communications and issues management advisory from CRC Public Relations. Support for media management, reputation protection, and crisis coordination.",
         },
       },
       {
@@ -69,7 +68,7 @@ const jsonLd = {
           "@type": "Course",
           name: "My PR Partner Crisis Masterclass",
           description:
-            "12-month professional development program for crisis leadership skills, featuring the Crisis Ready® course by Melissa Agnes. Backed by CRC PR's 25-year consulting practice.",
+            "12-month professional development program for crisis leadership skills, featuring the Crisis Ready® course by Melissa Agnes. Backed by more than 20 years of frontline consulting experience.",
           offers: {
             "@type": "Offer",
             price: "340",
@@ -115,7 +114,6 @@ export default function Home() {
           <LyallMercerSection />
           <CaseStudies />
           <Testimonials />
-          <AnnualSummitBanner />
           <DifferentiationSection />
           <FinalCTA />
           <FAQSection />

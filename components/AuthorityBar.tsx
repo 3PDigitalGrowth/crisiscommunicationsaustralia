@@ -7,18 +7,14 @@ export function AuthorityBar() {
         <p className="text-xs font-medium uppercase tracking-[0.32em] text-charcoal-mid">
           {siteConfig.authorityBar.label}
         </p>
-        <div className="mt-6 flex flex-wrap items-center justify-center gap-8 md:justify-between">
-          {siteConfig.mediaLinks.map((outlet) => (
-            <a
-              key={outlet.name}
-              href={outlet.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-heading text-[15px] font-black uppercase tracking-wide text-charcoal/30 no-underline transition-colors hover:text-charcoal/50"
-              aria-label={`Lyall Mercer featured in ${outlet.name}`}
+        <div className="mt-6 flex flex-wrap items-center justify-center gap-x-8 gap-y-4">
+          {siteConfig.mediaOutlets.map((outlet) => (
+            <span
+              key={outlet}
+              className="font-heading text-[14px] font-black tracking-wide text-charcoal/35 grayscale"
             >
-              {outlet.name}
-            </a>
+              {outlet}
+            </span>
           ))}
         </div>
         <p className="mt-6 text-sm text-charcoal-mid">

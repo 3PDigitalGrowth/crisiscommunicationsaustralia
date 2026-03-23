@@ -28,13 +28,13 @@ export function LyallMercerSection() {
               </div>
             )}
 
-            <div className="mt-8 grid gap-6 sm:grid-cols-3">
+            <div className="mt-8 grid gap-4 sm:grid-cols-3 md:grid-cols-1 lg:grid-cols-3">
               {siteConfig.lyall.statLabels.map((stat) => (
-                <div key={stat.label}>
+                <div key={stat.label} className="min-w-0">
                   <p className="font-heading text-4xl font-black text-brand-teal">
                     {stat.value}
                   </p>
-                  <p className="mt-2 text-[13px] uppercase tracking-[0.2em] text-off-white">
+                  <p className="mt-2 break-words text-[13px] uppercase tracking-[0.2em] text-off-white">
                     {stat.label}
                   </p>
                 </div>
@@ -51,7 +51,7 @@ export function LyallMercerSection() {
               <span className="block">{siteConfig.lyall.heading[1]}</span>
             </h2>
             <div className="mt-6 space-y-5 text-justify text-[17px] leading-[1.7] text-off-white">
-              {siteConfig.lyall.paragraphs.slice(0, 4).map((paragraph) => (
+              {siteConfig.lyall.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
             </div>
@@ -64,11 +64,6 @@ export function LyallMercerSection() {
                 {siteConfig.lyall.attribution}
               </p>
             </div>
-
-            <p className="text-justify text-[17px] leading-[1.7] text-off-white">
-              {siteConfig.lyall.paragraphs[4]}
-            </p>
-
             <div className="mt-8 flex flex-col items-start gap-3">
               <ScrollButton
                 label={siteConfig.lyall.urgentLink}

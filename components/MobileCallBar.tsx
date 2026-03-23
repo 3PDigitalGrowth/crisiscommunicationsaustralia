@@ -7,7 +7,7 @@ export default function MobileCallBar() {
     <a
       href={siteConfig.phone.href}
       className="fixed bottom-0 left-0 right-0 z-50 flex items-center justify-center gap-3 bg-brand-gold px-6 py-4 font-heading text-sm font-black uppercase tracking-widest text-navy-dark transition-opacity hover:opacity-95 md:hidden"
-      aria-label={`Call CRC PR now on ${siteConfig.phone.display}`}
+      aria-label={`Call CRC Public Relations on ${siteConfig.phone.display}`}
     >
       <svg
         width="16" height="16" viewBox="0 0 24 24" fill="none"

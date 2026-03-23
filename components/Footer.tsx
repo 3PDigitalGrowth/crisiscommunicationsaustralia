@@ -5,8 +5,8 @@ import { ScrollButton } from "./ScrollButton";
 
 export function Footer() {
   const copyrightLine = siteConfig.legal.abn
-    ? `© ${siteConfig.legal.copyrightYear} CRC PR Pty Ltd. All rights reserved. ABN: ${siteConfig.legal.abn}`
-    : `© ${siteConfig.legal.copyrightYear} CRC PR Pty Ltd. All rights reserved.`;
+    ? `© ${siteConfig.legal.copyrightYear} CRC Public Relations. All rights reserved. ABN: ${siteConfig.legal.abn}`
+    : `© ${siteConfig.legal.copyrightYear} CRC Public Relations. All rights reserved.`;
 
   return (
     <footer className="bg-[#111827] py-16 text-white">
@@ -26,7 +26,7 @@ export function Footer() {
               {siteConfig.phone.display}
             </a>
             <p className="mt-1 text-[13px] italic text-off-white/40">
-              Available 24/7 for urgent crisis support.
+              Urgent crisis and issue support by phone.
             </p>
           </div>
 
@@ -107,15 +107,6 @@ export function Footer() {
                 Phone:{" "}
                 <a href={siteConfig.phone.href} className="hover:text-white">
                   {siteConfig.phone.display}
-                </a>
-              </p>
-              <p>
-                {siteConfig.footer.mediaEnquiriesPrefix}{" "}
-                <a
-                  href={`mailto:${siteConfig.email.media}`}
-                  className="hover:text-white"
-                >
-                  {siteConfig.email.media}
                 </a>
               </p>
             </div>
