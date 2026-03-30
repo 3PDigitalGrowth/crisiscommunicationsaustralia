@@ -1,72 +1,77 @@
 import { siteConfig } from "@/config/site";
 
+import HeroRings from "./HeroRings";
 import { ScrollButton } from "./ScrollButton";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[72vh] overflow-hidden bg-navy-dark text-white md:min-h-[78vh]">
-      <div
-        className="pointer-events-none absolute inset-0 opacity-[0.07]"
-        aria-hidden="true"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,1) 1px, transparent 1px)",
-          backgroundSize: "36px 36px",
-        }}
-      />
+    <section className="relative flex min-h-[640px] flex-col items-center justify-center overflow-hidden bg-navy-dark px-6 py-24 text-center text-white">
+      <HeroRings />
 
-      <div className="relative z-[10] mx-auto grid h-full w-full max-w-7xl gap-12 px-6 py-20 md:grid-cols-[1.2fr_0.8fr] md:items-center md:py-24">
-        <div className="relative z-[10] max-w-[56rem]">
-          <p className="section-eyebrow text-brand-teal">
-            {siteConfig.hero.eyebrow}
-          </p>
-          <h1 className="heading-display mt-6 text-white">
-            <span className="block">{siteConfig.hero.heading[0]}</span>
-            <span className="block">{siteConfig.hero.heading[1]}</span>
-          </h1>
-          <div className="body-large mt-8 max-w-copy-md space-y-2 text-off-white">
-            {siteConfig.hero.subheading.map((line) => (
-              <p key={line}>{line}</p>
-            ))}
-          </div>
-          <div className="mt-10 flex flex-col gap-4 sm:flex-row md:flex-nowrap">
-            <ScrollButton
-              label={siteConfig.hero.urgentCta}
-              targetId={siteConfig.scrollTargets.urgent}
-              icon="alert"
-            />
-            <ScrollButton
-              label={siteConfig.hero.readinessCta}
-              targetId={siteConfig.scrollTargets.readiness}
-              icon="shield"
-              variant="outline"
-            />
-            <ScrollButton
-              label={siteConfig.hero.masterclassCta}
-              targetId={siteConfig.scrollTargets.masterclass}
-              variant="outline"
-            />
-          </div>
-          <div className="mt-10 max-w-copy-md">
-            <div className="mb-4 h-px w-20 bg-brand-teal/30" />
-            <p className="text-sm leading-6 text-off-white/70">
-              {siteConfig.hero.authorityCopy}
-            </p>
-          </div>
+      <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center">
+        <div className="mb-5 inline-flex items-center justify-center gap-2 rounded-full border border-brand-gold/25 bg-brand-gold/10 px-4 py-2">
+          <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-brand-gold" />
+          <a
+            href={siteConfig.phone.href}
+            className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold transition-colors hover:text-[#d8bc74]"
+          >
+            {siteConfig.phone.navLabel}
+          </a>
         </div>
 
-        <div className="relative hidden h-[420px] md:block" aria-hidden="true">
-          <svg
-            viewBox="0 0 520 520"
-            className="absolute inset-0 h-full w-full text-brand-teal/40"
-            fill="none"
-          >
-            <circle cx="320" cy="260" r="190" stroke="currentColor" strokeWidth="1.5" />
-            <circle cx="320" cy="260" r="145" stroke="currentColor" strokeWidth="1.5" />
-            <circle cx="320" cy="260" r="100" stroke="currentColor" strokeWidth="1.5" />
-            <circle cx="320" cy="260" r="55" stroke="currentColor" strokeWidth="1.5" />
-          </svg>
-          <div className="absolute inset-y-10 right-12 w-px bg-brand-gold/30" />
+        <p className="section-eyebrow mb-8 text-brand-teal">
+          {siteConfig.hero.eyebrow}
+        </p>
+
+        <h1 className="heading-display mb-8 text-white">
+          {siteConfig.hero.heading[0]}
+          <br />
+          <span>{siteConfig.hero.heading[1]}</span>
+        </h1>
+
+        <div className="body-large mb-10 flex max-w-copy-lg flex-col items-center gap-2">
+          {siteConfig.hero.subheading.map((line, index) => (
+            <p
+              key={line}
+              className={
+                index === 0
+                  ? "text-off-white"
+                  : "text-off-white/70"
+              }
+            >
+              {line}
+            </p>
+          ))}
+        </div>
+
+        <div className="mb-12 flex flex-col flex-wrap items-center justify-center gap-4 sm:flex-row">
+          <ScrollButton
+            label={siteConfig.hero.urgentCta}
+            targetId={siteConfig.scrollTargets.urgent}
+            icon="alert"
+            className="w-full sm:w-auto"
+          />
+          <ScrollButton
+            label={siteConfig.hero.readinessCta}
+            targetId={siteConfig.scrollTargets.readiness}
+            icon="shield"
+            variant="outline"
+            className="w-full sm:w-auto"
+          />
+          <ScrollButton
+            label={siteConfig.hero.masterclassCta}
+            targetId={siteConfig.scrollTargets.masterclass}
+            icon="book"
+            variant="outline"
+            className="w-full sm:w-auto"
+          />
+        </div>
+
+        <div className="max-w-copy-md">
+          <div className="mx-auto mb-4 h-px w-20 bg-brand-teal/30" />
+          <p className="text-sm leading-6 text-off-white/70">
+            {siteConfig.hero.authorityCopy}
+          </p>
         </div>
       </div>
     </section>

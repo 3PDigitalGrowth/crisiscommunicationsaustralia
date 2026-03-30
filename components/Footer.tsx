@@ -116,22 +116,6 @@ export function Footer() {
         <div className="mt-12 flex flex-col gap-4 border-t border-white/10 pt-6 text-[13px] md:flex-row md:items-center md:justify-between">
           <p className="text-off-white/40">{copyrightLine}</p>
           <div className="flex flex-wrap gap-4 text-off-white/60">
-            <a
-              href={siteConfig.links.privacyPolicyUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white"
-            >
-              Privacy Policy
-            </a>
-            <a
-              href={siteConfig.links.termsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:text-white"
-            >
-              Terms of Use
-            </a>
             <a href={siteConfig.links.disclaimerUrl} className="hover:text-white">
               Disclaimer
             </a>

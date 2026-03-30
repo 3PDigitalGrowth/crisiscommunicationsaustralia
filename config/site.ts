@@ -50,8 +50,6 @@ export const siteConfig = {
     myPrPartnerUrl: "https://myprpartner.com",
     masterclassUrl: "https://myprpartner.com/crisis-masterclass/",
     masterclassEnrolUrl: "https://myprpartner.com/product/crisis-masterclass/",
-    privacyPolicyUrl: "https://myprpartner.com/privacy-policy/",
-    termsUrl: "https://myprpartner.com/terms-and-conditions/",
     disclaimerUrl: "#", // TODO: CLIENT TO PROVIDE
   },
   legal: {
@@ -64,7 +62,7 @@ export const siteConfig = {
   },
   stats: {
     yearsExperience: "25+",
-    professionalsTrained: "1,000+",
+    professionalsTrained: "2,000+",
     industriesServed: "15+",
     clientRetention: "100%",
     continentsWorked: "Every",
@@ -170,7 +168,7 @@ export const siteConfig = {
   urgentPath: {
     id: urgentPathId,
     label: "FOR IMMEDIATE CRISIS & ISSUE RESPONSE",
-    heading: ["You Need Help.", "Right Now."],
+    heading: ["You need help.", "Right now."],
     paragraphs: [
       "When a crisis or major issue breaks, the first 15 minutes are critical. The decisions made, or not made, in that window will define the outcome.",
       "CRC Public Relations advisers have been in the room when it matters most. Lyall Mercer and his team have managed crises and complex issues for companies, governments, industry associations, schools, faith-based organisations, legal firms, celebrities, and sporting figures across Australia, the Pacific, and internationally.",
@@ -212,7 +210,7 @@ export const siteConfig = {
   readinessPath: {
     id: readinessPathId,
     label: "FOR CRISIS READINESS & PREPARATION",
-    heading: ["Be Ready Before", "It Happens."],
+    heading: ["Be ready before", "it happens."],
     paragraphs: [
       "Most crises and major issues are preventable, or at least containable, when you have the right plan in place. CRC Public Relations helps organisations prepare before the call comes.",
       "We develop practical, workable crisis communications plans. We provide crisis prevention consultancy and vulnerability assessments to identify where your organisation is exposed. And we conduct crisis scenario exercises so your team knows exactly what to do when it matters.",
@@ -248,9 +246,9 @@ export const siteConfig = {
   preparedPath: {
     id: masterclassPathId,
     label: "FOR PERSONAL & TEAM CRISIS LEADERSHIP",
-    heading: ["Develop Crisis", "Leadership Skills."],
+    heading: ["Develop crisis", "leadership skills."],
     paragraphs: [
-      "Whether you are a communications professional, HR manager, school principal, SME owner, or executive team member, the ability to lead through a crisis or major issue is a career-defining skill.",
+      "Whether you are a communications professional, business leader, executive team member, school principal, or a HR or marketing manager, the ability to lead through a crisis or major issue is a career-defining skill.",
       "The My PR Partner Crisis Masterclass gives you and your team the practical skills to prepare for, manage, and recover from any reputational crisis or issue, with expert guidance shaped by frontline Australian experience.",
       "This is not theory. This is war-room methodology, made accessible.",
     ],
@@ -288,14 +286,12 @@ export const siteConfig = {
       errorMessage:
         "Please complete all fields so we can send the checklist to the right person.",
     },
-    legal:
-      "No spam. Unsubscribe anytime. By submitting you agree to our Privacy Policy.",
     trustSignal:
       "Powered by CRC Public Relations, Australia's Crisis Communications Experts",
   },
   lyall: {
     eyebrow: "GUIDED BY EXPERIENCE",
-    heading: ["Experienced Counsel", "When It Matters Most."],
+    heading: ["Experienced counsel", "when it matters most."],
     paragraphs: [
       "Lyall Mercer began his career as a journalist, writing for some of Australia's leading newspapers. That foundation, understanding exactly how media thinks, moves, and decides what becomes a story, is what makes his approach to crisis communications unlike any other.",
       "Over the past 25 years, Lyall has built a reputation across Australasia as a leader in corporate public relations, reputation and issues management, and crisis communications. His clients include national and international companies, governments, senior executives, politicians, celebrities, and sporting figures, and he has worked with clients and media on every continent.",
@@ -313,7 +309,7 @@ export const siteConfig = {
       "Lyall Mercer, founder of CRC Public Relations and crisis communications adviser",
     statLabels: [
       { value: "25+", label: "YEARS EXPERIENCE" },
-      { value: "1,000+", label: "PROFESSIONALS TRAINED" },
+      { value: "2,000+", label: "PROFESSIONALS TRAINED" },
       { value: "EVERY", label: "CONTINENT WORKED" },
     ],
   },
@@ -329,21 +325,21 @@ export const siteConfig = {
         challenge: "Regulatory threat",
         description:
           "Developed and coordinated an intense public advocacy campaign during a period of acute regulatory pressure that threatened the entire industry. Media strategy and stakeholder communications supported the client's government relations.",
-        outcomeBadge: "Advocacy Campaign Coordinated",
+        outcomeBadge: "Legislation Amended",
       },
       {
         context: "Private Education Group",
         challenge: "Reputation crisis",
         description:
           "Managed the complete media response and parent and staff communications strategy during a high-profile reputational incident. Containment achieved. Minimal adverse coverage sustained.",
-        outcomeBadge: "Containment Achieved",
+        outcomeBadge: "Zero Enrolment Loss",
       },
       {
         context: "Government",
         challenge: "International relations",
         description:
           "Strategic counsel on stakeholder and media engagement during a sensitive international issue. Communications strategy aligned across multiple governments and countries.",
-        outcomeBadge: "Strategic Counsel Provided",
+        outcomeBadge: "Funding Secured",
       },
     ],
   },

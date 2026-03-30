@@ -210,9 +210,6 @@ export function LeadMagnetModal() {
               ) : null}
             </form>
 
-            <p className="mt-3 text-center text-xs text-charcoal-mid">
-              {siteConfig.leadMagnet.legal}
-            </p>
             <div className="mt-4 flex items-center justify-center gap-2 text-center text-[13px] text-charcoal-mid">
               <Shield aria-hidden="true" className="h-4 w-4 text-brand-teal" />
               <span>{siteConfig.leadMagnet.trustSignal}</span>

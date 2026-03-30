@@ -32,6 +32,7 @@ export function FinalCTA() {
             <ScrollButton
               label={siteConfig.finalCta.masterclassLabel}
               targetId={siteConfig.scrollTargets.masterclass}
+              icon="book"
               variant="outline"
             />
           </div>

@@ -1,17 +1,18 @@
 'use client';
 
-import { AlertCircle, Shield } from "lucide-react";
+import { AlertCircle, BookOpen, Shield } from "lucide-react";
 
 type ScrollButtonProps = {
   label: string;
   targetId: string;
   variant?: "solid" | "outline" | "text-gold" | "text-teal";
-  icon?: "alert" | "shield";
+  icon?: "alert" | "shield" | "book";
   className?: string;
 };
 
 const iconMap = {
   alert: AlertCircle,
+  book: BookOpen,
   shield: Shield,
 };
 
