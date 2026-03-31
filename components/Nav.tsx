@@ -14,7 +14,7 @@ export function Nav() {
             width={495}
             height={140}
             priority
-            className="h-12 w-auto md:h-24"
+            className="h-10 w-auto md:h-20"
           />
         </div>
         <a
