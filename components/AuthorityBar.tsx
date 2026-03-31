@@ -1,6 +1,23 @@
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 
-const mediaLogos = [
+type SvgLogo = {
+  name: string;
+  svg: string;
+};
+
+type ImageLogo = {
+  name: string;
+  image: {
+    src: string;
+    width: number;
+    height: number;
+  };
+};
+
+type MediaLogo = SvgLogo | ImageLogo;
+
+const mediaLogos: MediaLogo[] = [
   {
     name: "ABC",
     svg: `
@@ -46,25 +63,19 @@ const mediaLogos = [
   },
   {
     name: "Associated Press",
-    svg: `
-      <svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Associated Press">
-        <rect width="38" height="38" rx="3" fill="none" stroke="#2C2C2C" stroke-width="1"/>
-        <text x="19" y="16" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="11" fill="#2C2C2C" text-anchor="middle">AP</text>
-        <text x="19" y="27" font-family="Arial, sans-serif" font-size="6" fill="#2C2C2C" text-anchor="middle" letter-spacing="0.5">ASSOCIATED</text>
-        <text x="19" y="34" font-family="Arial, sans-serif" font-size="6" fill="#2C2C2C" text-anchor="middle" letter-spacing="0.5">PRESS</text>
-      </svg>
-    `,
+    image: {
+      src: "/images/logo-ap.png",
+      width: 283,
+      height: 243,
+    },
   },
   {
     name: "Australian Associated Press",
-    svg: `
-      <svg width="44" height="38" viewBox="0 0 44 38" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Australian Associated Press">
-        <rect width="44" height="38" rx="3" fill="none" stroke="#2C2C2C" stroke-width="1"/>
-        <text x="22" y="16" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="11" fill="#2C2C2C" text-anchor="middle">AAP</text>
-        <text x="22" y="26" font-family="Arial, sans-serif" font-size="5.5" fill="#2C2C2C" text-anchor="middle" letter-spacing="0.3">AUSTRALIAN</text>
-        <text x="22" y="33" font-family="Arial, sans-serif" font-size="5.5" fill="#2C2C2C" text-anchor="middle" letter-spacing="0.3">ASSOCIATED PRESS</text>
-      </svg>
-    `,
+    image: {
+      src: "/images/logo-aap.png",
+      width: 340,
+      height: 148,
+    },
   },
   {
     name: "Fox News",
@@ -88,11 +99,11 @@ const mediaLogos = [
   },
   {
     name: "Daily Telegraph",
-    svg: `
-      <svg width="128" height="22" viewBox="0 0 128 22" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Daily Telegraph">
-        <text x="64" y="21" font-family="Georgia, 'Times New Roman', serif" font-weight="700" font-size="13" fill="#2C2C2C" text-anchor="middle" letter-spacing="1">DAILY TELEGRAPH</text>
-      </svg>
-    `,
+    image: {
+      src: "/images/logo-daily-telegraph.png",
+      width: 317,
+      height: 190,
+    },
   },
 ];
 
@@ -107,9 +118,20 @@ export function AuthorityBar() {
           {mediaLogos.map((logo) => (
             <div
               key={logo.name}
-              className="flex h-8 items-center justify-center opacity-55 grayscale transition-opacity hover:opacity-80 md:h-9"
-              dangerouslySetInnerHTML={{ __html: logo.svg }}
-            />
+              className="flex h-8 items-center justify-center px-1 opacity-55 grayscale transition-opacity hover:opacity-80 [&>svg]:max-h-full [&>svg]:w-auto [&>svg]:overflow-visible md:h-9 md:px-1.5"
+            >
+              {"image" in logo ? (
+                <Image
+                  src={logo.image.src}
+                  alt={logo.name}
+                  width={logo.image.width}
+                  height={logo.image.height}
+                  className="max-h-full w-auto"
+                />
+              ) : (
+                <div dangerouslySetInnerHTML={{ __html: logo.svg }} />
+              )}
+            </div>
           ))}
         </div>
         <p className="mt-4 text-sm text-charcoal-mid">
