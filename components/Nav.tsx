@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Phone } from "lucide-react";
 
 import { siteConfig } from "@/config/site";
@@ -6,8 +7,15 @@ export function Nav() {
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-navy-dark/95 backdrop-blur">
       <div className="section-shell flex h-14 items-center justify-between gap-4">
-        <div className="font-heading text-[14px] font-black uppercase tracking-[0.22em] text-white">
-          {siteConfig.brand.logoText}
+        <div className="rounded-sm bg-white px-2 py-1 shadow-sm">
+          <Image
+            src="/images/cca-logo-v5.png"
+            alt={siteConfig.brand.name}
+            width={280}
+            height={70}
+            priority
+            className="h-7 w-auto"
+          />
         </div>
         <a
           href={siteConfig.phone.href}

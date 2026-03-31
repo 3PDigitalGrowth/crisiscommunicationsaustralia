@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { siteConfig } from "@/config/site";
 
 import { LeadMagnetTrigger } from "./LeadMagnetTrigger";
@@ -13,9 +14,15 @@ export function Footer() {
       <div className="section-shell">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <p className="font-heading text-base font-black">
-              {siteConfig.brand.logoText}
-            </p>
+            <div className="inline-block rounded-sm bg-white p-2 shadow-sm">
+              <Image
+                src="/images/cca-logo-v5.png"
+                alt={siteConfig.brand.name}
+                width={360}
+                height={90}
+                className="h-10 w-auto"
+              />
+            </div>
             <p className="mt-3 max-w-[15rem] text-sm leading-6 text-off-white/60">
               {siteConfig.footer.description}
             </p>
