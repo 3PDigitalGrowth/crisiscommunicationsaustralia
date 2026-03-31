@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { siteConfig } from "@/config/site";
 
+import { FooterContactForm } from "./FooterContactForm";
 import { LeadMagnetTrigger } from "./LeadMagnetTrigger";
 import { ScrollButton } from "./ScrollButton";
 
@@ -14,13 +15,13 @@ export function Footer() {
       <div className="section-shell">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <div className="inline-block rounded-sm bg-white p-2 shadow-sm">
+            <div className="inline-block">
               <Image
                 src="/images/cca-logo-v5.png"
                 alt={siteConfig.brand.name}
                 width={360}
-                height={90}
-                className="h-10 w-auto"
+                height={108}
+                className="h-12 w-auto"
               />
             </div>
             <p className="mt-3 max-w-[15rem] text-sm leading-6 text-off-white/60">
@@ -94,29 +95,7 @@ export function Footer() {
             <p className="text-[13px] font-medium uppercase tracking-[0.22em] text-white">
               {siteConfig.footer.contactLabel}
             </p>
-            <div className="mt-4 space-y-2 text-sm text-off-white/70">
-              <address style={{ fontStyle: "normal" }}>
-                <p>{siteConfig.address.company}</p>
-                <p>{siteConfig.address.street}</p>
-                <p>{`${siteConfig.address.city} ${siteConfig.address.state} ${siteConfig.address.postcode}`}</p>
-                <p>{siteConfig.address.country}</p>
-              </address>
-              <p>
-                Email:{" "}
-                <a
-                  href={`mailto:${siteConfig.email.general}`}
-                  className="hover:text-white"
-                >
-                  {siteConfig.email.general}
-                </a>
-              </p>
-              <p>
-                Phone:{" "}
-                <a href={siteConfig.phone.href} className="hover:text-white">
-                  {siteConfig.phone.display}
-                </a>
-              </p>
-            </div>
+            <FooterContactForm />
           </div>
         </div>
 

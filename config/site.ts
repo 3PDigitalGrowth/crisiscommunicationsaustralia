@@ -485,6 +485,15 @@ export const siteConfig = {
     ecosystemLabel: "OUR ECOSYSTEM",
     quickActionsLabel: "QUICK ACTIONS",
     contactLabel: "CONTACT",
+    contactForm: {
+      intro: "Get in contact",
+      emailLabel: "Email address",
+      requestLabel: "Contact request",
+      requestPlaceholder: "Tell us briefly how we can help.",
+      submitLabel: "Send request",
+      successMessage: "Thanks. We will be in touch shortly.",
+      errorMessage: "Please enter your email address and a short request.",
+    },
     ecosystemLinks: [
       {
         label: "CRC Public Relations, Corporate & Crisis Advisory",

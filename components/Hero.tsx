@@ -1,14 +1,28 @@
+'use client';
+
+import { useEffect, useState } from "react";
+
 import { siteConfig } from "@/config/site";
 
 import HeroRings from "./HeroRings";
 import { ScrollButton } from "./ScrollButton";
 
 export function Hero() {
+  const [activeLine, setActiveLine] = useState(0);
+
+  useEffect(() => {
+    const intervalId = window.setInterval(() => {
+      setActiveLine((current) => (current + 1) % siteConfig.hero.subheading.length);
+    }, 1500);
+
+    return () => window.clearInterval(intervalId);
+  }, []);
+
   return (
-    <section className="relative flex min-h-[calc(100svh-13rem)] flex-col items-center justify-center overflow-hidden bg-navy-dark px-6 py-16 text-center text-white md:min-h-[calc(100svh-10.5rem)] md:py-20">
+    <section className="relative flex min-h-[calc(100svh-13rem)] flex-col items-center justify-center overflow-hidden bg-navy-dark px-6 py-16 text-center text-white md:min-h-[calc(100svh-10.5rem)] md:py-20 md:text-left">
       <HeroRings />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-4xl flex-col items-center">
+      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center md:items-start">
         <div className="mb-4 inline-flex items-center justify-center gap-2 rounded-full border border-brand-gold/25 bg-brand-gold/10 px-4 py-2 md:mb-5">
           <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-brand-gold" />
           <a
@@ -29,14 +43,14 @@ export function Hero() {
           <span>{siteConfig.hero.heading[1]}</span>
         </h1>
 
-        <div className="body-large mb-8 flex max-w-copy-lg flex-col items-center gap-1.5 md:mb-10 md:gap-2">
+        <div className="body-large mb-8 flex max-w-copy-lg flex-col items-center gap-1.5 md:mb-10 md:items-start md:gap-2">
           {siteConfig.hero.subheading.map((line, index) => (
             <p
               key={line}
               className={
-                index === 0
-                  ? "text-off-white"
-                  : "text-off-white/70"
+                index === activeLine
+                  ? "text-white transition-colors duration-500"
+                  : "text-off-white/45 transition-colors duration-500"
               }
             >
               {line}
@@ -44,7 +58,7 @@ export function Hero() {
           ))}
         </div>
 
-        <div className="mb-8 flex flex-col flex-wrap items-center justify-center gap-3 sm:flex-row md:mb-10 md:gap-4">
+        <div className="mb-8 flex flex-col flex-wrap items-center justify-center gap-3 sm:flex-row md:mb-10 md:items-start md:justify-start md:gap-4">
           <ScrollButton
             label={siteConfig.hero.urgentCta}
             targetId={siteConfig.scrollTargets.urgent}
@@ -68,7 +82,7 @@ export function Hero() {
         </div>
 
         <div className="max-w-copy-md">
-          <div className="mx-auto mb-4 h-px w-20 bg-brand-teal/30" />
+          <div className="mx-auto mb-4 h-px w-20 bg-brand-teal/30 md:mx-0" />
           <p className="text-sm leading-6 text-off-white/70">
             {siteConfig.hero.authorityCopy}
           </p>

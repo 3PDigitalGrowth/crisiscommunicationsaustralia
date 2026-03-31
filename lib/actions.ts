@@ -130,3 +130,47 @@ export async function submitLeadMagnet(
     };
   }
 }
+
+export async function submitFooterContactRequest(
+  prevState: FormState,
+  formData: FormData,
+): Promise<FormState> {
+  void prevState;
+
+  const email = getTrimmedValue(formData, "email");
+  const request = getTrimmedValue(formData, "request");
+
+  if (!email || !request) {
+    return {
+      status: "error",
+      message: siteConfig.footer.contactForm.errorMessage,
+    };
+  }
+
+  try {
+    await sendEmailIfConfigured({
+      to:
+        process.env.RESEND_CONTACT_TO_EMAIL ??
+        siteConfig.forms.resendContactDestination,
+      replyTo: email,
+      subject: `Footer contact request from ${email}`,
+      html: `
+        <h1>Footer contact request</h1>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Request:</strong></p>
+        <p>${request.replace(/\n/g, "<br />")}</p>
+      `,
+    });
+
+    return {
+      status: "success",
+      message: siteConfig.footer.contactForm.successMessage,
+    };
+  } catch {
+    return {
+      status: "error",
+      message:
+        "We could not send your request right now. Please try again shortly.",
+    };
+  }
+}
