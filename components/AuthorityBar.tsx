@@ -80,7 +80,7 @@ const mediaLogos: MediaLogo[] = [
   {
     name: "Fox News",
     svg: `
-      <svg width="84" height="24" viewBox="0 0 84 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fox News">
+      <svg width="104" height="24" viewBox="0 0 104 24" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Fox News">
         <text x="0" y="18" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="18" fill="#2C2C2C" letter-spacing="-0.5">FOX</text>
         <text x="48" y="18" font-family="Arial, sans-serif" font-weight="700" font-size="18" fill="#2C2C2C">News</text>
       </svg>
