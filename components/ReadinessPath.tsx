@@ -10,7 +10,7 @@ export function ReadinessPath() {
       id={siteConfig.readinessPath.id}
       className="flex h-full w-full flex-col border-t-4 border-brand-teal bg-white px-0 pt-8"
     >
-      <p className="font-heading text-xs font-black uppercase tracking-[0.28em] text-brand-teal">
+      <p className="font-heading text-xs font-black tracking-[0.14em] text-brand-teal">
         {siteConfig.readinessPath.label}
       </p>
       <h2 className="heading-card mt-5 text-navy-dark">
@@ -49,7 +49,7 @@ export function ReadinessPath() {
           href={siteConfig.links.crcPrCrisisUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-full rounded-[4px] bg-brand-teal py-4 text-center font-heading text-sm font-black uppercase tracking-widest text-white transition-opacity hover:opacity-90"
+          className="block w-full rounded-[4px] bg-brand-teal py-4 text-center font-heading text-sm font-black tracking-[0.02em] text-white transition-opacity hover:opacity-90"
         >
           {siteConfig.readinessPath.primaryCta}
         </a>

@@ -111,14 +111,14 @@ export function AuthorityBar() {
   return (
     <section className="border-b border-border bg-white py-6 md:py-7">
       <div className="section-shell text-center">
-        <p className="text-xs font-medium uppercase tracking-[0.32em] text-charcoal-mid">
+        <p className="text-xs font-medium tracking-[0.14em] text-charcoal-mid">
           {siteConfig.authorityBar.label}
         </p>
         <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-4 md:gap-x-8">
           {mediaLogos.map((logo) => (
             <div
               key={logo.name}
-              className="flex h-8 items-center justify-center px-1 opacity-55 grayscale transition-opacity hover:opacity-80 [&>svg]:max-h-full [&>svg]:w-auto [&>svg]:overflow-visible md:h-9 md:px-1.5"
+              className="flex h-8 shrink-0 items-center justify-center px-1.5 opacity-55 grayscale transition-opacity hover:opacity-80 [&>svg]:max-h-full [&>svg]:w-auto [&>svg]:overflow-visible md:h-9 md:px-2"
             >
               {"image" in logo ? (
                 <Image

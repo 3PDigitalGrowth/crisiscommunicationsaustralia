@@ -25,14 +25,14 @@ export default function MobileCallBar() {
       <button
         type="button"
         onClick={handleDismiss}
-        className="absolute right-3 top-1/2 -translate-y-1/2 px-2 py-1 font-heading text-sm font-black uppercase tracking-[0.08em] text-white"
+        className="absolute right-3 top-1/2 -translate-y-1/2 px-2 py-1 font-heading text-sm font-black tracking-[0.02em] text-white"
         aria-label="Close call bar"
       >
         X
       </button>
       <a
         href={siteConfig.phone.href}
-        className="flex items-center justify-center gap-3 px-6 py-4 pr-14 font-heading text-sm font-black uppercase tracking-widest text-navy-dark transition-opacity hover:opacity-95"
+        className="flex items-center justify-center gap-3 px-6 py-4 pr-14 font-heading text-sm font-black tracking-[0.04em] text-navy-dark transition-opacity hover:opacity-95"
         aria-label={`Call CRC Public Relations on ${siteConfig.phone.display}`}
       >
         <svg
@@ -43,7 +43,7 @@ export default function MobileCallBar() {
         >
           <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.22 2.18 A2 2 0 012.18 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81 a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.16 6.16l1.27-1.27 a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
         </svg>
-        CALL NOW - {siteConfig.phone.display}
+        Call now - {siteConfig.phone.display}
       </a>
     </div>
   );

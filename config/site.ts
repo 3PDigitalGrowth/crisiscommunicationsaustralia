@@ -5,7 +5,7 @@ const masterclassPathId = "masterclass-path";
 export const siteConfig = {
   brand: {
     name: "Crisis Communications Australia",
-    logoText: "CRISIS COMMUNICATIONS AUSTRALIA",
+    logoText: "Crisis Communications Australia",
     division: "A division of CRC Public Relations",
     siteUrl: "https://crisiscommunications.com.au",
   },
@@ -15,7 +15,7 @@ export const siteConfig = {
     availability: "Urgent crisis and issue support by phone",
     responseCommitment:
       "If we miss your call, we will return it as soon as possible.",
-    navLabel: "URGENT SUPPORT: 1300 182 186",
+    navLabel: "Urgent support: 1300 182 186",
   },
   email: {
     general: "info@crcpr.com.au",
@@ -112,21 +112,21 @@ export const siteConfig = {
   },
   hero: {
     eyebrow:
-      "A DIVISION OF CRC PUBLIC RELATIONS, AUSTRALIA'S LEADING CRISIS & PR ADVISORY FIRM",
+      "A division of CRC Public Relations, Australia's leading crisis & PR advisory firm",
     heading: ["Crisis Communications", "Australia"],
     subheading: [
       "The right response, right now.",
       "The right preparation, before you need it.",
       "The right skills, for when it matters most.",
     ],
-    urgentCta: "I NEED HELP NOW",
-    readinessCta: "I WANT TO BE PREPARED",
-    masterclassCta: "DEVELOP MY SKILLS",
+    urgentCta: "I need help now",
+    readinessCta: "I want to be prepared",
+    masterclassCta: "Develop my skills",
     authorityCopy:
       "Backed by more than 20 years of crisis and issues management consulting. Trusted by companies, governments, industry associations, and organisations across Australia, the Pacific, and beyond.",
   },
   authorityBar: {
-    label: "LYALL MERCER, AS SEEN IN",
+    label: "Lyall Mercer, as seen in",
   },
   problem: {
     heading: ["A crisis or major issue doesn't", "wait for business hours."],
@@ -144,7 +144,7 @@ export const siteConfig = {
       masterclass: "I want to develop crisis leadership skills",
     },
     crisisClock: {
-      label: "THE MOMENT IT HITS",
+      label: "The moment it hits",
       scenarios: [
         {
           time: "2:17 AM",
@@ -167,7 +167,7 @@ export const siteConfig = {
   },
   urgentPath: {
     id: urgentPathId,
-    label: "FOR IMMEDIATE CRISIS & ISSUE RESPONSE",
+    label: "For immediate crisis & issue response",
     heading: ["You need help.", "Right now."],
     paragraphs: [
       "When a crisis or major issue breaks, the first 15 minutes are critical. The decisions made, or not made, in that window will define the outcome.",
@@ -191,7 +191,7 @@ export const siteConfig = {
       message: "Nature of Situation",
       messagePlaceholder:
         "Brief description - optional. We will call you to discuss.",
-      submitLabel: "GET HELP NOW →",
+      submitLabel: "Get help now",
       successMessage: "Message received.",
       errorMessage:
         "Please enter your name and phone number so we can call you quickly and confidentially.",
@@ -200,7 +200,7 @@ export const siteConfig = {
       heading: "Message received.",
       body:
         "A CRC Public Relations adviser will return your call as soon as possible. If your situation is urgent, call us directly now.",
-      ctaLabel: "CALL 1300 182 186",
+      ctaLabel: "Call 1300 182 186",
     },
     confidentialityNote:
       "Everything shared with CRC Public Relations is treated with strict confidentiality. We do not reference client engagements without explicit written permission. Our advisors operate with exceptional and professional discretion.",
@@ -209,7 +209,7 @@ export const siteConfig = {
   },
   readinessPath: {
     id: readinessPathId,
-    label: "FOR CRISIS READINESS & PREPARATION",
+    label: "For crisis readiness & preparation",
     heading: ["Be ready before", "it happens."],
     paragraphs: [
       "Most crises and major issues are preventable, or at least containable, when you have the right plan in place. CRC Public Relations helps organisations prepare before the call comes.",
@@ -237,7 +237,7 @@ export const siteConfig = {
           "A confidential review of your real risk areas, conducted by Australia's most experienced crisis and issues management advisers.",
       },
     ],
-    primaryCta: "DISCUSS YOUR READINESS →",
+    primaryCta: "Discuss your readiness",
     primaryCtaSubtext:
       "Confidential. No obligation. We will assess your situation and recommend the right approach.",
     footer:
@@ -245,7 +245,7 @@ export const siteConfig = {
   },
   preparedPath: {
     id: masterclassPathId,
-    label: "FOR PERSONAL & TEAM CRISIS LEADERSHIP",
+    label: "For personal & team crisis leadership",
     heading: ["Develop crisis", "leadership skills."],
     paragraphs: [
       "Whether you are a communications professional, business leader, executive team member, school principal, or a HR or marketing manager, the ability to lead through a crisis or major issue is a career-defining skill.",
@@ -262,7 +262,7 @@ export const siteConfig = {
     melissaBody:
       "The Crisis Ready® 12-month course is presented exclusively for Australasia by Melissa Agnes - global authority on crisis leadership, whose model is taught at Harvard University and has been used to train NATO, the Pentagon, and organisations on every continent.",
     badge: "Powered by CRC Public Relations",
-    primaryCta: "VIEW MASTERCLASS OPTIONS →",
+    primaryCta: "View masterclass options",
     primaryCtaSubtext:
       "Monthly investment from $340, with annual payment options available.",
     secondaryPrefix: "Not ready to commit?",
@@ -271,7 +271,7 @@ export const siteConfig = {
       "Founded by Lyall Mercer and Barbara Gorogh. Backed by more than 20 years of real crisis advisory work across Australia, the Pacific, and internationally.",
   },
   leadMagnet: {
-    eyebrow: "FREE DOWNLOAD",
+    eyebrow: "Free download",
     heading: ["The Crisis Readiness", "Checklist"],
     paragraphs: [
       "Used by Australian communications teams, HR managers, and executive leaders. 27 questions to assess your organisation's real crisis readiness, with an action plan for every gap.",
@@ -281,7 +281,7 @@ export const siteConfig = {
       firstName: "First Name",
       email: "Work Email",
       organisation: "Organisation",
-      submitLabel: "SEND ME THE CHECKLIST →",
+      submitLabel: "Send me the checklist",
       successMessage: "Check your inbox, your checklist is on its way.",
       errorMessage:
         "Please complete all fields so we can send the checklist to the right person.",
@@ -290,7 +290,7 @@ export const siteConfig = {
       "Powered by CRC Public Relations, Australia's Crisis Communications Experts",
   },
   lyall: {
-    eyebrow: "GUIDED BY EXPERIENCE",
+    eyebrow: "Guided by experience",
     heading: ["Experienced counsel", "when it matters most."],
     paragraphs: [
       "Lyall Mercer began his career as a journalist, writing for some of Australia's leading newspapers. That foundation, understanding exactly how media thinks, moves, and decides what becomes a story, is what makes his approach to crisis communications unlike any other.",
@@ -301,16 +301,16 @@ export const siteConfig = {
     quote:
       "\"You have 15 minutes to respond to an emerging crisis before you start to lose control of the message.\"",
     attribution: "Lyall Mercer",
-    urgentLink: "WORK WITH LYALL DIRECTLY →",
-    readinessLink: "PREPARE YOUR ORGANISATION →",
-    masterclassLink: "EXPLORE THE MASTERCLASS →",
+    urgentLink: "Work with Lyall directly",
+    readinessLink: "Prepare your organisation",
+    masterclassLink: "Explore the masterclass",
     placeholderInitials: "LM",
     imageAlt:
       "Lyall Mercer, founder of CRC Public Relations and crisis communications adviser",
     statLabels: [
-      { value: "25+", label: "YEARS EXPERIENCE" },
-      { value: "2,000+", label: "PROFESSIONALS TRAINED" },
-      { value: "EVERY", label: "CONTINENT WORKED" },
+      { value: "25+", label: "Years experience" },
+      { value: "2,000+", label: "Professionals trained" },
+      { value: "Every", label: "Continent worked" },
     ],
   },
   caseStudies: {
@@ -374,7 +374,7 @@ export const siteConfig = {
       "\"100% of our consulting clients would recommend CRC Public Relations to a peer.\" CRC Public Relations Client Survey",
   },
   differentiation: {
-    eyebrow: "THE CRISIS COMMS AUSTRALIA DIFFERENCE",
+    eyebrow: "The Crisis Comms Australia difference",
     heading: [
       "Not just a course. Not just a retainer.",
       "The only ecosystem of its kind.",
@@ -407,13 +407,13 @@ export const siteConfig = {
     ],
   },
   finalCta: {
-    eyebrow: "THE DECISION",
+    eyebrow: "The decision",
     heading: "Choose Your Path.",
     body:
       "There is no wrong answer. Only the answer you choose before a crisis or major issue strikes, or the one you're forced to make when it already has.",
-    urgentLabel: "I NEED URGENT HELP",
-    readinessLabel: "I WANT TO BE PREPARED",
-    masterclassLabel: "DEVELOP MY SKILLS",
+    urgentLabel: "I need urgent help",
+    readinessLabel: "I want to be prepared",
+    masterclassLabel: "Develop my skills",
     leadPrefix: "Not ready to decide?",
     leadLink: "Start with our free Crisis Readiness Checklist",
   },
@@ -482,9 +482,9 @@ export const siteConfig = {
     ],
   },
   footer: {
-    ecosystemLabel: "OUR ECOSYSTEM",
-    quickActionsLabel: "QUICK ACTIONS",
-    contactLabel: "CONTACT",
+    ecosystemLabel: "Our ecosystem",
+    quickActionsLabel: "Quick actions",
+    contactLabel: "Contact",
     contactForm: {
       intro: "Get in contact",
       emailLabel: "Email address",

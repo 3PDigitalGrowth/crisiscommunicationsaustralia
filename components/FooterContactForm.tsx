@@ -13,7 +13,7 @@ function SubmitButton() {
     <button
       type="submit"
       disabled={pending}
-      className="inline-flex items-center justify-center rounded-[4px] bg-brand-teal px-5 py-3 font-heading text-xs font-black uppercase tracking-[0.12em] text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
+      className="inline-flex items-center justify-center rounded-[4px] bg-brand-teal px-5 py-3 font-heading text-xs font-black tracking-[0.04em] text-white transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:opacity-60"
     >
       {pending ? "Sending..." : siteConfig.footer.contactForm.submitLabel}
     </button>
@@ -36,7 +36,7 @@ export function FooterContactForm() {
         <div>
           <label
             htmlFor="footer-email"
-            className="mb-2 block text-xs font-medium uppercase tracking-[0.14em] text-off-white/55"
+            className="mb-2 block text-xs font-medium tracking-[0.08em] text-off-white/55"
           >
             {siteConfig.footer.contactForm.emailLabel}
           </label>
@@ -52,7 +52,7 @@ export function FooterContactForm() {
         <div>
           <label
             htmlFor="footer-request"
-            className="mb-2 block text-xs font-medium uppercase tracking-[0.14em] text-off-white/55"
+            className="mb-2 block text-xs font-medium tracking-[0.08em] text-off-white/55"
           >
             {siteConfig.footer.contactForm.requestLabel}
           </label>

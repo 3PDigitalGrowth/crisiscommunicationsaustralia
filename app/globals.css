@@ -35,7 +35,7 @@ select {
   }
 
   .section-eyebrow {
-    @apply font-sans text-[13px] font-medium uppercase tracking-[0.28em];
+    @apply font-sans text-[13px] font-medium tracking-[0.12em];
   }
 
   .heading-display {
@@ -55,6 +55,6 @@ select {
   }
 
   .button-base {
-    @apply inline-flex items-center justify-center gap-2 rounded-sm px-8 py-4 text-[15px] font-bold uppercase tracking-[0.08em] transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-sm px-8 py-4 text-[15px] font-bold tracking-[0.02em] transition-all duration-300;
   }
 }

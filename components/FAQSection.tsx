@@ -11,7 +11,7 @@ export default function FAQSection() {
     <section className="border-t border-border bg-off-white py-20">
       <div className="mx-auto max-w-7xl px-6">
         <div className="mb-10">
-          <p className="mb-3 text-[11px] font-medium uppercase tracking-widest text-brand-teal">
+          <p className="mb-3 text-[11px] font-medium tracking-[0.14em] text-brand-teal">
             {siteConfig.faqs.eyebrow}
           </p>
           <h2 className="font-heading text-[32px] font-black leading-tight text-navy-dark md:text-[38px]">

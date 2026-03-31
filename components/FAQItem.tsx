@@ -22,7 +22,7 @@ export function FAQItem({ question, answer }: { question: string; answer: string
           <span className="block font-heading text-[15px] font-black leading-snug text-navy-dark transition-colors group-hover:text-brand-teal">
             {question}
           </span>
-          <span className="mt-1.5 block text-[13px] leading-relaxed text-charcoal-mid">
+          <span className="mt-1.5 block text-[14px] leading-relaxed text-charcoal-mid">
             {preview}
             {rest && !open && (
               <span className="ml-1 text-brand-teal">Read more</span>
@@ -41,7 +41,7 @@ export function FAQItem({ question, answer }: { question: string; answer: string
       </button>
       {open && rest && (
         <div className="pb-5">
-          <p className="text-[14px] leading-relaxed text-charcoal">
+          <p className="text-[14px] leading-relaxed text-charcoal-mid">
             {rest}
           </p>
         </div>

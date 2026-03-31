@@ -34,7 +34,7 @@ export function LyallMercerSection() {
                   <p className="font-heading text-4xl font-black text-brand-teal">
                     {stat.value}
                   </p>
-                  <p className="mt-2 break-words text-[13px] uppercase tracking-[0.2em] text-off-white">
+                  <p className="mt-2 break-words text-[13px] tracking-[0.08em] text-off-white">
                     {stat.label}
                   </p>
                 </div>

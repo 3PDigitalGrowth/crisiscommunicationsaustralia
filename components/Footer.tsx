@@ -39,7 +39,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-[13px] font-medium uppercase tracking-[0.22em] text-white">
+            <p className="text-[13px] font-medium tracking-[0.12em] text-white">
               {siteConfig.footer.ecosystemLabel}
             </p>
             <div className="mt-4 space-y-3">
@@ -62,7 +62,7 @@ export function Footer() {
               ))}
             </div>
 
-            <p className="mt-6 text-[13px] font-medium uppercase tracking-[0.22em] text-white">
+            <p className="mt-6 text-[13px] font-medium tracking-[0.12em] text-white">
               {siteConfig.footer.quickActionsLabel}
             </p>
             <div className="mt-4 flex flex-col items-start gap-3">
@@ -92,7 +92,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="text-[13px] font-medium uppercase tracking-[0.22em] text-white">
+            <p className="text-[13px] font-medium tracking-[0.12em] text-white">
               {siteConfig.footer.contactLabel}
             </p>
             <FooterContactForm />

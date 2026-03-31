@@ -21,11 +21,11 @@ function SubmitButton() {
       type="submit"
       disabled={pending}
       className="w-full bg-brand-gold text-navy-dark font-heading font-black
-                 text-xs tracking-widest uppercase py-4 rounded-[4px]
+                 text-xs tracking-[0.08em] py-4 rounded-[4px]
                  hover:opacity-90 transition-opacity mt-1
                  disabled:cursor-not-allowed disabled:opacity-70"
     >
-      {pending ? "SENDING..." : siteConfig.urgentPath.formFields.submitLabel}
+      {pending ? "Sending..." : siteConfig.urgentPath.formFields.submitLabel}
     </button>
   );
 }
@@ -38,7 +38,7 @@ export function UrgentPath() {
       id={siteConfig.urgentPath.id}
       className="flex h-full w-full flex-col border-t-4 border-brand-gold bg-white px-0 pt-8"
     >
-      <p className="font-heading text-xs font-black uppercase tracking-[0.28em] text-brand-gold">
+      <p className="font-heading text-xs font-black tracking-[0.14em] text-brand-gold">
         {siteConfig.urgentPath.label}
       </p>
       <h2 className="heading-card mt-5 text-navy-dark">
@@ -100,7 +100,7 @@ export function UrgentPath() {
 
         <div className="my-8 flex items-center gap-4">
           <div className="h-px flex-1 bg-border" />
-          <span className="text-sm text-charcoal-mid">OR</span>
+          <span className="text-sm text-charcoal-mid">Or</span>
           <div className="h-px flex-1 bg-border" />
         </div>
 
@@ -129,7 +129,7 @@ export function UrgentPath() {
               </p>
               <a
                 href={siteConfig.phone.href}
-                className="inline-flex items-center gap-2 rounded-[4px] bg-brand-gold px-6 py-3 font-heading text-xs font-black uppercase tracking-widest text-navy-dark transition-opacity hover:opacity-90"
+                className="inline-flex items-center gap-2 rounded-[4px] bg-brand-gold px-6 py-3 font-heading text-xs font-black tracking-[0.04em] text-navy-dark transition-opacity hover:opacity-90"
               >
                 <svg
                   width="14" height="14" viewBox="0 0 24 24" fill="none"

@@ -27,7 +27,7 @@ export function Hero() {
           <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-brand-gold" />
           <a
             href={siteConfig.phone.href}
-            className="text-[10px] font-bold uppercase tracking-[0.2em] text-brand-gold transition-colors hover:text-[#d8bc74]"
+            className="text-[10px] font-bold tracking-[0.12em] text-brand-gold transition-colors hover:text-[#d8bc74]"
           >
             {siteConfig.phone.navLabel}
           </a>

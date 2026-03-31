@@ -19,7 +19,7 @@ export function Nav() {
         </div>
         <a
           href={siteConfig.phone.href}
-          className="inline-flex items-center justify-center rounded-full bg-brand-gold px-5 py-2 font-heading text-[13px] font-black uppercase tracking-[0.08em] text-navy-dark hover:-translate-y-0.5 hover:shadow-lg"
+          className="inline-flex items-center justify-center rounded-full bg-brand-gold px-5 py-2 font-heading text-[13px] font-black tracking-[0.02em] text-navy-dark hover:-translate-y-0.5 hover:shadow-lg"
           aria-label={siteConfig.phone.navLabel}
         >
           <span className="hidden sm:inline">{siteConfig.phone.navLabel}</span>

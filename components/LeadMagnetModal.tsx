@@ -19,7 +19,7 @@ function SubmitButton() {
       disabled={pending}
       className="button-base w-full bg-brand-teal text-white hover:-translate-y-0.5 hover:shadow-lg disabled:cursor-not-allowed disabled:opacity-70"
     >
-      {pending ? "SENDING..." : siteConfig.leadMagnet.formFields.submitLabel}
+      {pending ? "Sending..." : siteConfig.leadMagnet.formFields.submitLabel}
     </button>
   );
 }
@@ -142,7 +142,7 @@ export function LeadMagnetModal() {
               <X aria-hidden="true" className="h-5 w-5" />
             </button>
 
-            <p className="font-heading text-xs font-black uppercase tracking-[0.28em] text-brand-teal">
+            <p className="font-heading text-xs font-black tracking-[0.14em] text-brand-teal">
               {siteConfig.leadMagnet.eyebrow}
             </p>
             <h3
