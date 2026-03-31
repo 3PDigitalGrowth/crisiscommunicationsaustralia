@@ -3,12 +3,53 @@
 import { Resend } from "resend";
 
 import { siteConfig } from "@/config/site";
+import {
+  buildFooterAdminEmail,
+  buildFooterConfirmationEmail,
+  buildLeadMagnetAdminEmail,
+  buildLeadMagnetConfirmationEmail,
+  buildUrgentAdminEmail,
+} from "@/lib/form-emails";
 import type { FormState } from "@/types";
 
 const getTrimmedValue = (formData: FormData, field: string) =>
   String(formData.get(field) ?? "").trim();
 
-const sendEmailIfConfigured = async ({
+const getResendClient = () => {
+  const apiKey = process.env.RESEND_API_KEY;
+
+  if (!apiKey) {
+    throw new Error("RESEND_API_KEY is not set");
+  }
+
+  return new Resend(apiKey);
+};
+
+const getFromEmail = () => {
+  const fromEmail =
+    process.env.RESEND_FROM_EMAIL ?? siteConfig.forms.resendFromEmail;
+
+  if (!fromEmail) {
+    throw new Error("RESEND_FROM_EMAIL is not set");
+  }
+
+  return fromEmail;
+};
+
+const getAdminRecipients = () => {
+  const configuredRecipients = process.env.RESEND_ADMIN_TO
+    ?.split(",")
+    .map((email) => email.trim())
+    .filter(Boolean);
+
+  if (configuredRecipients?.length) {
+    return configuredRecipients;
+  }
+
+  return siteConfig.forms.adminNotificationEmails;
+};
+
+const sendEmail = async ({
   subject,
   html,
   replyTo,
@@ -17,26 +58,34 @@ const sendEmailIfConfigured = async ({
   subject: string;
   html: string;
   replyTo?: string;
-  to: string;
+  to: string | string[];
 }) => {
-  const apiKey = process.env.RESEND_API_KEY;
-  const fromEmail =
-    process.env.RESEND_FROM_EMAIL ?? siteConfig.forms.resendFromEmail;
-
-  if (!apiKey || !fromEmail || fromEmail.includes("TODO")) {
-    return;
-  }
-
-  const resend = new Resend(apiKey);
+  const resend = getResendClient();
 
   await resend.emails.send({
-    from: fromEmail,
+    from: getFromEmail(),
     html,
     replyTo,
     subject,
     to,
   });
 };
+
+const sendAdminNotification = async ({
+  subject,
+  html,
+  replyTo,
+}: {
+  subject: string;
+  html: string;
+  replyTo?: string;
+}) =>
+  sendEmail({
+    subject,
+    html,
+    replyTo,
+    to: getAdminRecipients(),
+  });
 
 export async function submitContactForm(
   prevState: FormState,
@@ -45,11 +94,10 @@ export async function submitContactForm(
   void prevState;
 
   const name = getTrimmedValue(formData, "name");
-  const organisation = getTrimmedValue(formData, "organisation");
   const phone = getTrimmedValue(formData, "phone");
   const message = getTrimmedValue(formData, "message");
 
-  if (!name || !organisation || !phone || !message) {
+  if (!name || !phone) {
     return {
       status: "error",
       message: siteConfig.urgentPath.formFields.errorMessage,
@@ -57,20 +105,13 @@ export async function submitContactForm(
   }
 
   try {
-    await sendEmailIfConfigured({
-      to:
-        process.env.RESEND_CONTACT_TO_EMAIL ??
-        siteConfig.forms.resendContactDestination,
-      replyTo: siteConfig.email.general,
-      subject: `Urgent crisis enquiry from ${name}`,
-      html: `
-        <h1>Urgent crisis enquiry</h1>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Organisation:</strong> ${organisation}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Situation:</strong></p>
-        <p>${message.replace(/\n/g, "<br />")}</p>
-      `,
+    await sendAdminNotification({
+      subject: `Urgent crisis enquiry: ${name}`,
+      html: buildUrgentAdminEmail({
+        name,
+        phone,
+        message,
+      }),
     });
 
     return {
@@ -104,18 +145,23 @@ export async function submitLeadMagnet(
   }
 
   try {
-    await sendEmailIfConfigured({
-      to:
-        process.env.RESEND_LEAD_TO_EMAIL ??
-        siteConfig.forms.resendLeadDestination,
+    await sendAdminNotification({
       replyTo: email,
-      subject: `Crisis checklist request from ${firstName}`,
-      html: `
-        <h1>Lead magnet request</h1>
-        <p><strong>First name:</strong> ${firstName}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Organisation:</strong> ${organisation}</p>
-      `,
+      subject: `Checklist request: ${firstName} (${organisation})`,
+      html: buildLeadMagnetAdminEmail({
+        firstName,
+        email,
+        organisation,
+      }),
+    });
+
+    await sendEmail({
+      to: email,
+      subject: "Your Crisis Readiness Checklist request has been received",
+      html: buildLeadMagnetConfirmationEmail({
+        firstName,
+        organisation,
+      }),
     });
 
     return {
@@ -148,18 +194,22 @@ export async function submitFooterContactRequest(
   }
 
   try {
-    await sendEmailIfConfigured({
-      to:
-        process.env.RESEND_CONTACT_TO_EMAIL ??
-        siteConfig.forms.resendContactDestination,
+    await sendAdminNotification({
       replyTo: email,
-      subject: `Footer contact request from ${email}`,
-      html: `
-        <h1>Footer contact request</h1>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Request:</strong></p>
-        <p>${request.replace(/\n/g, "<br />")}</p>
-      `,
+      subject: `Website enquiry from ${email}`,
+      html: buildFooterAdminEmail({
+        email,
+        request,
+      }),
+    });
+
+    await sendEmail({
+      to: email,
+      subject: "We have received your enquiry",
+      html: buildFooterConfirmationEmail({
+        email,
+        request,
+      }),
     });
 
     return {

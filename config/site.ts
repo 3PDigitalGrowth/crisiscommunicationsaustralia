@@ -33,10 +33,12 @@ export const siteConfig = {
     ga4MeasurementId: "G-XXXXXXXXXX", // TODO: CLIENT TO PROVIDE
   },
   forms: {
-    formspreeEndpoint: "https://formspree.io/f/XXXXXXXX", // TODO: CLIENT TO PROVIDE
-    resendFromEmail: "noreply@crisiscommunications.com.au", // TODO: CLIENT TO PROVIDE
-    resendContactDestination: "info@crcpr.com.au", // TODO: CLIENT TO PROVIDE
-    resendLeadDestination: "media@crcpr.com.au", // TODO: CLIENT TO PROVIDE
+    resendFromEmail: "crisiscommunications@websitesubmission.com.au",
+    adminNotificationEmails: [
+      "lyall@crcpr.com.au",
+      "barbara@crcpr.com.au",
+      "alex@3pdigital.com.au",
+    ],
   },
   links: {
     lyallMercerUrl: "https://lyallmercer.com",
@@ -382,25 +384,25 @@ export const siteConfig = {
     cards: [
       {
         icon: "building",
-        title: "Decades of Real Cases",
+        title: "Decades of real cases",
         body:
           "Not US content. Not academic theory. Australian crises, international media, real legal and regulatory pressure - taught by practitioners who have been there. Lyall Mercer began his career as a journalist, giving him an understanding of media that no course can replicate.",
       },
       {
         icon: "users",
-        title: "Three Paths. One Trusted Ecosystem.",
+        title: "Three paths. One trusted ecosystem.",
         body:
           "Whether you need immediate crisis support, practical crisis readiness planning for your organisation, or professional development for your team, this ecosystem brings advisory, preparation, and training together in one place.",
       },
       {
         icon: "dollar",
-        title: "Practical Skills. Real-World Depth.",
+        title: "Practical skills. Real-world depth.",
         body:
           "The Crisis Masterclass gives leaders and communications professionals access to practical, practitioner-led training with real-world depth, grounded in Australian and international experience.",
       },
       {
         icon: "globe",
-        title: "Every Sector. Every Continent.",
+        title: "Every sector. Every continent.",
         body:
           "From ASX companies and government departments to schools, faith-based organisations, sporting bodies, and organisations across the Pacific region and beyond, CRC Public Relations has advised clients across every sector and worked with media on every continent.",
       },
@@ -408,7 +410,7 @@ export const siteConfig = {
   },
   finalCta: {
     eyebrow: "The decision",
-    heading: "Choose Your Path.",
+    heading: "Choose your path.",
     body:
       "There is no wrong answer. Only the answer you choose before a crisis or major issue strikes, or the one you're forced to make when it already has.",
     urgentLabel: "I need urgent help",
