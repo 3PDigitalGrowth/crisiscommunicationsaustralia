@@ -11,8 +11,8 @@ export function Nav() {
           <Image
             src="/images/cca-logo-v5.png"
             alt={siteConfig.brand.name}
-            width={420}
-            height={126}
+            width={495}
+            height={140}
             priority
             className="h-12 w-auto md:h-24"
           />

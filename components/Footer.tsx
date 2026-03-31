@@ -19,8 +19,8 @@ export function Footer() {
               <Image
                 src="/images/cca-logo-v5.png"
                 alt={siteConfig.brand.name}
-                width={360}
-                height={108}
+                width={495}
+                height={140}
                 className="h-12 w-auto"
               />
             </div>
