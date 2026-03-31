@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 
 import { siteConfig } from "@/config/site";
 
-import HeroRings from "./HeroRings";
+import HeroArcs from "./HeroArcs";
 import { ScrollButton } from "./ScrollButton";
 
 export function Hero() {
@@ -20,7 +20,7 @@ export function Hero() {
 
   return (
     <section className="relative flex min-h-[calc(100svh-13rem)] flex-col items-center justify-center overflow-hidden bg-navy-dark px-6 py-16 text-center text-white md:min-h-[calc(100svh-10.5rem)] md:py-20 md:text-left">
-      <HeroRings />
+      <HeroArcs />
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center md:items-start">
         <div className="mb-4 inline-flex items-center justify-center gap-2 rounded-full border border-brand-gold/25 bg-brand-gold/10 px-4 py-2 md:mb-5">

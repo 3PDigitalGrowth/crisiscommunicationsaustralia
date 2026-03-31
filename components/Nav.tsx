@@ -6,7 +6,7 @@ import { siteConfig } from "@/config/site";
 export function Nav() {
   return (
     <header className="fixed inset-x-0 top-0 z-40 border-b border-border/80 bg-white/95 backdrop-blur">
-      <div className="section-shell flex h-20 items-center justify-between gap-4">
+      <div className="section-shell flex h-20 items-center justify-between gap-4 md:h-24">
         <div className="flex items-center">
           <Image
             src="/images/cca-logo-v5.png"
@@ -14,7 +14,7 @@ export function Nav() {
             width={420}
             height={126}
             priority
-            className="h-12 w-auto md:h-14"
+            className="h-12 w-auto md:h-24"
           />
         </div>
         <a
