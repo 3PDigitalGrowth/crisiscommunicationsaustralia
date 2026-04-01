@@ -105,6 +105,9 @@ export function Footer() {
             <a href={siteConfig.links.disclaimerUrl} className="hover:text-white">
               Disclaimer
             </a>
+            <a href={siteConfig.links.privacyPolicyUrl} className="hover:text-white">
+              Privacy policy
+            </a>
           </div>
         </div>
       </div>

@@ -53,6 +53,7 @@ export const siteConfig = {
     masterclassUrl: "https://myprpartner.com/crisis-masterclass/",
     masterclassEnrolUrl: "https://myprpartner.com/product/crisis-masterclass/",
     disclaimerUrl: "#", // TODO: CLIENT TO PROVIDE
+    privacyPolicyUrl: "/privacy-policy",
   },
   legal: {
     abn: "",
