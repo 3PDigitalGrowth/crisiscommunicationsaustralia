@@ -12,6 +12,7 @@ type ImageLogo = {
     src: string;
     width: number;
     height: number;
+    className?: string;
   };
 };
 
@@ -19,13 +20,12 @@ type MediaLogo = SvgLogo | ImageLogo;
 
 const mediaLogos: MediaLogo[] = [
   {
-    name: "ABC",
-    svg: `
-      <svg width="48" height="28" viewBox="0 0 48 28" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="ABC">
-        <rect width="48" height="28" rx="2" fill="none" stroke="#2C2C2C" stroke-width="1"/>
-        <text x="24" y="20" font-family="Arial Black, Arial, sans-serif" font-weight="900" font-size="14" fill="#2C2C2C" text-anchor="middle">ABC</text>
-      </svg>
-    `,
+    name: "AAP",
+    image: {
+      src: "/images/logo-aap-authority.svg",
+      width: 111,
+      height: 45,
+    },
   },
   {
     name: "Sky Business",
@@ -67,6 +67,7 @@ const mediaLogos: MediaLogo[] = [
       src: "/images/logo-ap.png",
       width: 283,
       height: 243,
+      className: "w-[83px]",
     },
   },
   {
@@ -103,6 +104,7 @@ const mediaLogos: MediaLogo[] = [
       src: "/images/logo-daily-telegraph.png",
       width: 317,
       height: 190,
+      className: "w-[83px]",
     },
   },
 ];
@@ -126,7 +128,7 @@ export function AuthorityBar() {
                   alt={logo.name}
                   width={logo.image.width}
                   height={logo.image.height}
-                  className="max-h-full w-auto"
+                  className={`max-h-full ${logo.image.className ?? "w-auto"}`}
                 />
               ) : (
                 <div dangerouslySetInnerHTML={{ __html: logo.svg }} />

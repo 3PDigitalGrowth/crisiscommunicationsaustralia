@@ -128,7 +128,7 @@ export const siteConfig = {
       "Backed by more than 20 years of crisis and issues management consulting. Trusted by companies, governments, industry associations, and organisations across Australia, the Pacific, and beyond.",
   },
   authorityBar: {
-    label: "Lyall Mercer, as seen in",
+    label: "Lead crisis strategist Lyall Mercer, as seen in",
   },
   problem: {
     heading: ["A crisis or major issue doesn't", "wait for business hours."],
@@ -302,7 +302,7 @@ export const siteConfig = {
     ],
     quote:
       "\"You have 15 minutes to respond to an emerging crisis before you start to lose control of the message.\"",
-    attribution: "Lyall Mercer",
+    attribution: "Lyall Mercer, Lead crisis strategist",
     urgentLink: "Work with Lyall directly",
     readinessLink: "Prepare your organisation",
     masterclassLink: "Explore the masterclass",

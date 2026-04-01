@@ -36,7 +36,7 @@ const getFromEmail = () => {
   return fromEmail;
 };
 
-const getAdminRecipients = () => {
+const getAdminRecipients = (): string[] => {
   const configuredRecipients = process.env.RESEND_ADMIN_TO
     ?.split(",")
     .map((email) => email.trim())
@@ -46,7 +46,7 @@ const getAdminRecipients = () => {
     return configuredRecipients;
   }
 
-  return siteConfig.forms.adminNotificationEmails;
+  return [...siteConfig.forms.adminNotificationEmails];
 };
 
 const sendEmail = async ({
