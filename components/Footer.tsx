@@ -15,7 +15,7 @@ export function Footer() {
       <div className="section-shell">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
-            <div className="inline-block">
+            <div className="inline-block rounded-md bg-white px-3 py-2">
               <Image
                 src="/images/cca-logo-v5.png"
                 alt={siteConfig.brand.name}

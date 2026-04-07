@@ -321,7 +321,7 @@ export const siteConfig = {
     heading: ["We have been in the room", "when it mattered most."],
     body: "Client identities are protected. Outcomes are real.",
     confidentialityNote:
-      "All client details are withheld at client request. CRC Public Relations does not reference engagements without explicit written permission.",
+      "All client details are withheld at client request.",
     cards: [
       {
         context: "National Industry Association",
@@ -449,9 +449,9 @@ export const siteConfig = {
         question:
           "How much does crisis PR and crisis communications advice cost in Australia?",
         answer:
-          "The cost of crisis communications support in Australia varies significantly depending on the scale and duration of the situation. Boutique crisis PR firms typically charge between $5,000 and $20,000 per month for ongoing retainer arrangements. For specific crisis incidents, project-based engagements are common. CRC Public Relations provides confidential consultations to discuss the right approach for your situation - contact us directly on 1300 182 186.",
+          "The cost of crisis communications support in Australia varies significantly depending on the scale, urgency, complexity, and duration of the situation. Some organisations engage advisers on an ongoing retainer, while others seek support for a specific incident or short-term project. CRC Public Relations provides confidential consultations to discuss the right approach for your situation - contact us directly on 1300 182 186.",
         schemaAnswer:
-          "Boutique crisis PR firms typically charge between $5,000 and $20,000 per month for ongoing retainer arrangements. CRC Public Relations provides confidential consultations to discuss the right approach for your situation - contact us directly on 1300 182 186.",
+          "The cost of crisis communications support varies depending on the scale, urgency, complexity, and duration of the situation. CRC Public Relations provides confidential consultations to discuss the right approach for your situation - contact us directly on 1300 182 186.",
       },
       {
         question: "What is the difference between a crisis and an issue?",
