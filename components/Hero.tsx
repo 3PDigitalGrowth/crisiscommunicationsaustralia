@@ -19,11 +19,13 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative flex min-h-[calc(100svh-13rem)] flex-col items-center justify-center overflow-hidden bg-navy-dark px-6 pb-16 pt-28 text-center text-white md:min-h-[calc(100svh-10.5rem)] md:py-20 md:text-left">
-      <HeroArcs />
+    <section className="relative flex min-h-[calc(100svh-13rem)] flex-col items-center justify-center bg-navy-dark px-6 pb-16 pt-28 text-center text-white md:min-h-[calc(100svh-10.5rem)] md:py-20 md:text-left">
+      <div className="absolute inset-0 overflow-hidden">
+        <HeroArcs />
+      </div>
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center md:items-start">
-        <p className="section-eyebrow mb-6 max-w-md text-balance text-brand-teal md:mb-8 md:max-w-none">
+        <p className="section-eyebrow mb-6 text-balance text-brand-teal md:mb-8">
           {siteConfig.hero.eyebrow}
         </p>
 
