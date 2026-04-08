@@ -23,7 +23,7 @@ export function Hero() {
       <HeroArcs />
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center md:items-start">
-        <p className="section-eyebrow mb-6 text-brand-teal md:mb-8">
+        <p className="section-eyebrow mb-6 max-w-md text-balance text-brand-teal md:mb-8 md:max-w-none">
           {siteConfig.hero.eyebrow}
         </p>
 
