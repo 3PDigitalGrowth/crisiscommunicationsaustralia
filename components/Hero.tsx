@@ -19,7 +19,7 @@ export function Hero() {
   }, []);
 
   return (
-    <section className="relative flex min-h-[calc(100svh-13rem)] flex-col items-center justify-center bg-navy-dark px-6 pb-16 pt-28 text-center text-white md:min-h-[calc(100svh-10.5rem)] md:py-20 md:text-left">
+    <section className="relative flex min-h-[calc(100svh-13rem)] flex-col items-center bg-navy-dark px-6 pb-16 pt-28 text-center text-white md:min-h-[calc(100svh-10.5rem)] md:justify-center md:py-20 md:text-left">
       <div className="absolute inset-0 overflow-hidden">
         <HeroArcs />
       </div>
