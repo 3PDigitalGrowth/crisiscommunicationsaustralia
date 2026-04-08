@@ -5,7 +5,7 @@ import { siteConfig } from "@/config/site";
 
 export function Nav() {
   return (
-    <header className="fixed inset-x-0 top-0 z-40 border-b border-border/80 bg-white/95 backdrop-blur">
+    <header className="fixed inset-x-0 top-0 z-40 border-b border-border/80 bg-white/95 pt-[env(safe-area-inset-top,0px)] backdrop-blur">
       <div className="section-shell flex h-20 items-center justify-between gap-4 md:h-24">
         <div className="flex items-center">
           <Image
