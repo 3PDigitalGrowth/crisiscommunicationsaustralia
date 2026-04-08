@@ -23,16 +23,6 @@ export function Hero() {
       <HeroArcs />
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-col items-center md:items-start">
-        <div className="mb-4 inline-flex items-center justify-center gap-2 rounded-full border border-brand-gold/25 bg-brand-gold/10 px-4 py-2 md:mb-5">
-          <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-brand-gold" />
-          <a
-            href={siteConfig.phone.href}
-            className="text-[10px] font-bold tracking-[0.12em] text-brand-gold transition-colors hover:text-[#d8bc74]"
-          >
-            {siteConfig.phone.navLabel}
-          </a>
-        </div>
-
         <p className="section-eyebrow mb-6 text-brand-teal md:mb-8">
           {siteConfig.hero.eyebrow}
         </p>
