@@ -20,11 +20,12 @@ type MediaLogo = SvgLogo | ImageLogo;
 
 const mediaLogos: MediaLogo[] = [
   {
-    name: "AAP",
+    name: "ABC",
     image: {
-      src: "/images/logo-aap-authority.svg",
-      width: 111,
-      height: 45,
+      src: "/images/logo-abc.png",
+      width: 271,
+      height: 186,
+      className: "w-[75px]",
     },
   },
   {
@@ -137,7 +138,7 @@ export function AuthorityBar() {
           ))}
         </div>
         <p className="mt-4 text-sm text-charcoal-mid">
-          {`${siteConfig.stats.professionalsTrained} Professionals Trained  ·  ${siteConfig.stats.industriesServed} Industries Served`}
+          {`${siteConfig.stats.professionalsTrained} professionals trained  ·  ${siteConfig.stats.industriesServed} industries served`}
         </p>
       </div>
     </section>

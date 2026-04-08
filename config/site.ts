@@ -178,9 +178,9 @@ export const siteConfig = {
       "We will manage the media and communications to key stakeholders. Protect your reputation. Guide every decision. And we do it with absolute confidentiality.",
     ],
     trustSignals: [
-      { icon: "clock", label: "Urgent Support" },
-      { icon: "lock", label: "Strict Confidentiality" },
-      { icon: "phone", label: "Experienced Guidance" },
+      { icon: "clock", label: "Urgent support" },
+      { icon: "lock", label: "Strict confidentiality" },
+      { icon: "phone", label: "Experienced guidance" },
     ],
     servicesCopy:
       "CRC Public Relations also provides media strategy, issues management, reputation advisory, corporate communications, digital media, and media training.",
@@ -206,7 +206,7 @@ export const siteConfig = {
       ctaLabel: "Call 1300 182 186",
     },
     confidentialityNote:
-      "Everything shared with CRC Public Relations is treated with strict confidentiality. We do not reference client engagements without explicit written permission. Our advisors operate with exceptional and professional discretion.",
+      "Everything shared with CRC Public Relations is treated with strict confidentiality. Our advisors operate with exceptional and professional discretion.",
     footer:
       "A division of CRC Public Relations, trusted crisis and issues advisory across Australia, the Pacific, and internationally for more than 20 years.",
   },
@@ -220,22 +220,22 @@ export const siteConfig = {
     ],
     services: [
       {
-        title: "Crisis Communications Plans",
+        title: "Crisis communications plans",
         description:
           "Practical, workable plans that ensure you and your team are ready when faced with an issue or crisis that could damage your reputation, revenue, and future viability.",
       },
       {
-        title: "Crisis Prevention Consultancy",
+        title: "Crisis prevention consultancy",
         description:
           "We assess the risks to your reputation, identify vulnerabilities, and help you communicate your actions to stakeholders, building trust in your brand before a crisis ever arrives.",
       },
       {
-        title: "Crisis Scenario Exercises",
+        title: "Crisis scenario exercises",
         description:
           "Realistic scenario-based exercises that test your team's readiness and decision-making under pressure, so you are not learning on the job when it counts.",
       },
       {
-        title: "Issues & Vulnerability Assessment",
+        title: "Issues & vulnerability assessment",
         description:
           "A confidential review of your real risk areas, conducted by Australia's most experienced crisis and issues management advisers.",
       },
