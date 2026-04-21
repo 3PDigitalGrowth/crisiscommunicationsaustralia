@@ -30,7 +30,7 @@ export const siteConfig = {
     country: "Australia",
   },
   analytics: {
-    ga4MeasurementId: "G-XXXXXXXXXX", // TODO: CLIENT TO PROVIDE
+    ga4MeasurementId: "G-JMZKXV38W8",
   },
   forms: {
     resendFromEmail: "crisiscommunications@websitesubmission.com.au",
