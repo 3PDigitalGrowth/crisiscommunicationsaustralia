@@ -7,7 +7,7 @@ export const siteConfig = {
     name: "Crisis Communications Australia",
     logoText: "Crisis Communications Australia",
     division: "A division of CRC Public Relations",
-    siteUrl: "https://crisiscommunications.com.au",
+    siteUrl: "https://www.crisiscommunications.com.au",
   },
   phone: {
     display: "1300 182 186",
