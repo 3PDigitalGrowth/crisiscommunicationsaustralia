@@ -257,7 +257,7 @@ export const siteConfig = {
     ],
     highlights: [
       "Exclusive Crisis Ready® 12-month course - presented by Melissa Agnes, Crisis Ready Institute USA",
-      "Australian context, local law, media landscape, and real case studies",
+      "Australian context, media landscape, and real case studies",
       "From $340/month, with the option to pay monthly or annually.",
     ],
     melissaLabel: "In partnership with",
